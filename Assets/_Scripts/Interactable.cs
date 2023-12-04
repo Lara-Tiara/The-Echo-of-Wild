@@ -27,5 +27,4 @@ public class Interactable : MonoBehaviour
 			//myNotify.Raise();
 		}
 	}
-
 }
