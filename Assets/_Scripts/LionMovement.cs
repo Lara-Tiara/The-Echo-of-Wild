@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerMovement : MonoBehaviour
+public class LionMovement : MonoBehaviour
 {
 	public float moveSpeed = 3f;
 	public Rigidbody2D rb;
@@ -34,4 +34,3 @@ public class PlayerMovement : MonoBehaviour
 		transform.position = pos;
 	}
 }
-
