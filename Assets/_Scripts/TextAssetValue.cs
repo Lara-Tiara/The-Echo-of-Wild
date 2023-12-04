@@ -1,7 +1,7 @@
 using UnityEngine;
-
-[CreateAssetMenu(menuName = "Scriptable Objects/New Dialogue Value", fileName = "New Dialogue Asset")]
+[CreateAssetMenu(menuName = "Scriptable Object/New Dialog Value", fileName = "New Dialog Asset")]
 public class TextAssetValue : ScriptableObject
 {
-    public TextAsset value;
+	public TextAsset value;
+
 }
