@@ -72,7 +72,7 @@ public partial class @UserInput: IInputActionCollection2, IDisposable
                 {
                     ""name"": ""up"",
                     ""id"": ""1130e9f1-e030-46b2-937c-2c8dfc237c10"",
-                    ""path"": ""W"",
+                    ""path"": ""<Keyboard>/#(W)"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -94,7 +94,7 @@ public partial class @UserInput: IInputActionCollection2, IDisposable
                 {
                     ""name"": ""down"",
                     ""id"": ""c5a613f6-ad50-4a65-ac72-df6ea40b1ba5"",
-                    ""path"": ""S"",
+                    ""path"": ""<Keyboard>/#(S)"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -116,7 +116,7 @@ public partial class @UserInput: IInputActionCollection2, IDisposable
                 {
                     ""name"": ""left"",
                     ""id"": ""69f29b5c-fbc5-43a4-a8a4-12700ce93b29"",
-                    ""path"": ""A"",
+                    ""path"": ""<Keyboard>/#(A)"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -138,7 +138,7 @@ public partial class @UserInput: IInputActionCollection2, IDisposable
                 {
                     ""name"": ""right"",
                     ""id"": ""ebf41c9e-a4ac-4980-8088-22ba4431636e"",
-                    ""path"": ""D"",
+                    ""path"": ""<Keyboard>/#(D)"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -180,6 +180,24 @@ public partial class @UserInput: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""Exit"",
+                    ""type"": ""Button"",
+                    ""id"": ""83c39dca-5217-4301-ba87-2f860464f1cb"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Continue"",
+                    ""type"": ""Button"",
+                    ""id"": ""d585d9d4-e3f2-47cd-9fb8-914cb83b1753"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -204,6 +222,28 @@ public partial class @UserInput: IInputActionCollection2, IDisposable
                     ""action"": ""ScrollWheel"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""870dd6ec-c447-41bd-834b-6389f4e87f05"",
+                    ""path"": ""<Keyboard>/enter"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Exit"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""385d8291-d4da-40d9-8b88-2a3ca7425212"",
+                    ""path"": ""<Keyboard>/space"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Continue"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -218,6 +258,8 @@ public partial class @UserInput: IInputActionCollection2, IDisposable
         m_Dialogue = asset.FindActionMap("Dialogue", throwIfNotFound: true);
         m_Dialogue_Click = m_Dialogue.FindAction("Click", throwIfNotFound: true);
         m_Dialogue_ScrollWheel = m_Dialogue.FindAction("ScrollWheel", throwIfNotFound: true);
+        m_Dialogue_Exit = m_Dialogue.FindAction("Exit", throwIfNotFound: true);
+        m_Dialogue_Continue = m_Dialogue.FindAction("Continue", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -335,12 +377,16 @@ public partial class @UserInput: IInputActionCollection2, IDisposable
     private List<IDialogueActions> m_DialogueActionsCallbackInterfaces = new List<IDialogueActions>();
     private readonly InputAction m_Dialogue_Click;
     private readonly InputAction m_Dialogue_ScrollWheel;
+    private readonly InputAction m_Dialogue_Exit;
+    private readonly InputAction m_Dialogue_Continue;
     public struct DialogueActions
     {
         private @UserInput m_Wrapper;
         public DialogueActions(@UserInput wrapper) { m_Wrapper = wrapper; }
         public InputAction @Click => m_Wrapper.m_Dialogue_Click;
         public InputAction @ScrollWheel => m_Wrapper.m_Dialogue_ScrollWheel;
+        public InputAction @Exit => m_Wrapper.m_Dialogue_Exit;
+        public InputAction @Continue => m_Wrapper.m_Dialogue_Continue;
         public InputActionMap Get() { return m_Wrapper.m_Dialogue; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -356,6 +402,12 @@ public partial class @UserInput: IInputActionCollection2, IDisposable
             @ScrollWheel.started += instance.OnScrollWheel;
             @ScrollWheel.performed += instance.OnScrollWheel;
             @ScrollWheel.canceled += instance.OnScrollWheel;
+            @Exit.started += instance.OnExit;
+            @Exit.performed += instance.OnExit;
+            @Exit.canceled += instance.OnExit;
+            @Continue.started += instance.OnContinue;
+            @Continue.performed += instance.OnContinue;
+            @Continue.canceled += instance.OnContinue;
         }
 
         private void UnregisterCallbacks(IDialogueActions instance)
@@ -366,6 +418,12 @@ public partial class @UserInput: IInputActionCollection2, IDisposable
             @ScrollWheel.started -= instance.OnScrollWheel;
             @ScrollWheel.performed -= instance.OnScrollWheel;
             @ScrollWheel.canceled -= instance.OnScrollWheel;
+            @Exit.started -= instance.OnExit;
+            @Exit.performed -= instance.OnExit;
+            @Exit.canceled -= instance.OnExit;
+            @Continue.started -= instance.OnContinue;
+            @Continue.performed -= instance.OnContinue;
+            @Continue.canceled -= instance.OnContinue;
         }
 
         public void RemoveCallbacks(IDialogueActions instance)
@@ -392,5 +450,7 @@ public partial class @UserInput: IInputActionCollection2, IDisposable
     {
         void OnClick(InputAction.CallbackContext context);
         void OnScrollWheel(InputAction.CallbackContext context);
+        void OnExit(InputAction.CallbackContext context);
+        void OnContinue(InputAction.CallbackContext context);
     }
 }
