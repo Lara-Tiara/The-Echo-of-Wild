@@ -1,57 +1,50 @@
-/*
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+//using UnityEngine.InputSystem;
 
 public class DialogueTrigger : MonoBehaviour
 {
-    [Header("Visual Cue")]
-    [SerializeField] private GameObject visualCue;
-
-    [Header("Emote Animator")]
-    [SerializeField] private Animator emoteAnimator;
-
+    [Header("Que Sign")]
+    [SerializeField] private GameObject queSign;
     [Header("Ink JSON")]
     [SerializeField] private TextAsset inkJSON;
-
     private bool playerInRange;
-
-    private void Awake() 
-    {
+    //Keyboard kb = InputSystem.GetDevice<Keyboard>();
+   
+    private void Awake() {
         playerInRange = false;
-        visualCue.SetActive(false);
+        if (queSign == null) {
+            Debug.LogError("Que Sign is not assigned in DialogueTrigger.");
+            return;
+        }
+        queSign.SetActive(false);
     }
-
-    private void Update() 
-    {
-        if (playerInRange && !DialogueManager.GetInstance().dialogueIsPlaying) 
-        {
-            visualCue.SetActive(true);
-            if (InputManager.GetInstance().GetInteractPressed()) 
-            {
-                DialogueManager.GetInstance().EnterDialogueMode(inkJSON, emoteAnimator);
+    private void Update(){
+            if (queSign == null || inkJSON == null) {
+                return; // Skip the update if either is null
+            }
+            
+            if(playerInRange){
+                queSign.SetActive(true);
+                /*
+                if(kb.spaceKey.wasPressedThisFrame){
+                    Debug.Log(inkJSON.text);
+                }
+                */
+            }else{
+                queSign.SetActive(false);
             }
         }
-        else 
-        {
-            visualCue.SetActive(false);
-        }
-    }
-
-    private void OnTriggerEnter2D(Collider2D collider) 
-    {
-        if (collider.gameObject.tag == "Player")
-        {
+    private void OnTriggerEnter2D(Collider2D other) {
+        if( other.gameObject.tag == "Player"){
             playerInRange = true;
         }
     }
-
-    private void OnTriggerExit2D(Collider2D collider) 
-    {
-        if (collider.gameObject.tag == "Player")
-        {
+    
+    private void OnTriggerExit2D(Collider2D other) {
+        if( other.gameObject.tag == "Player"){
             playerInRange = false;
         }
     }
 }
-*/
