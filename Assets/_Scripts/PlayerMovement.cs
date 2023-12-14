@@ -8,7 +8,7 @@ public class PlayerMovement : MonoBehaviour
 	public Rigidbody2D rb;
 	public Animator animator;
 
-	Vector2 movement;
+	private Vector2 movement;
 
 	void Start()
 	{
@@ -16,6 +16,20 @@ public class PlayerMovement : MonoBehaviour
 		animator = GetComponent<Animator>();
 	}
 
+
+	private void Awake() {
+		rb = GetComponent<Rigidbody2D>();
+	}
+/*
+	 private void OnEnable() {
+        userInput.Gameplay._2DMovement.performed += _2Dmovement;
+    }
+
+    private void OnDisable() {
+        userInput.Gameplay._2DMovement.performed -= _2Dmovement;
+    }
+*/
+	//private void _2Dmovement(InputAction.CallbackContext context) {}
 	void Update()
 	{
 		movement.x = Input.GetAxisRaw("Horizontal");
@@ -28,6 +42,8 @@ public class PlayerMovement : MonoBehaviour
 
 	void FixedUpdate()
 	{
+		//movement = userInput.Gameplay._2DMovement.ReadValue<Vector2>();
+		//rb.AddForce(moveDirection * move);
 		Vector2 pos = transform.position;
 		pos += movement.normalized * moveSpeed * Time.fixedDeltaTime;
 		//rb.MovePosition(rb.position * movement * moveSpeed * Time.fixedDeltaTime);
