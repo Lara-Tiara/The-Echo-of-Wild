@@ -1,16 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-//using UnityEngine.InputSystem;
+using UnityEngine.InputSystem;
 
-public class DialogueTrigger : MonoBehaviour
+public class DialogueTrigger : Interactable
 {
     [Header("Que Sign")]
     [SerializeField] private GameObject queSign;
     [Header("Ink JSON")]
     [SerializeField] private TextAsset inkJSON;
-    private bool playerInRange;
-    //Keyboard kb = InputSystem.GetDevice<Keyboard>();
    
     private void Awake() {
         playerInRange = false;
@@ -24,27 +22,15 @@ public class DialogueTrigger : MonoBehaviour
             if (queSign == null || inkJSON == null) {
                 return; // Skip the update if either is null
             }
-            
+            Keyboard kb = InputSystem.GetDevice<Keyboard>();
             if(playerInRange){
                 queSign.SetActive(true);
-                /*
+                
                 if(kb.spaceKey.wasPressedThisFrame){
                     Debug.Log(inkJSON.text);
                 }
-                */
             }else{
                 queSign.SetActive(false);
             }
         }
-    private void OnTriggerEnter2D(Collider2D other) {
-        if( other.gameObject.tag == "Player"){
-            playerInRange = true;
-        }
-    }
-    
-    private void OnTriggerExit2D(Collider2D other) {
-        if( other.gameObject.tag == "Player"){
-            playerInRange = false;
-        }
-    }
 }
