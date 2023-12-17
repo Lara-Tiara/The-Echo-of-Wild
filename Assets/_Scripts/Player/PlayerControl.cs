@@ -51,9 +51,4 @@ public class PlayerControl : MonoBehaviour
     private void OnDisable() {
         controls.Gameplay.Disable();
     }
-    public void Talk(InputAction.CallbackContext context){
-        if(context.phase == InputActionPhase.Performed){
-            Debug.Log("Player want to talk");
-        }
-    }
 }
