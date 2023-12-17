@@ -47,7 +47,7 @@ public class DialogueManager : MonoBehaviour
 
         //dialogueVariables.StartListening(currentStory);
 
-        ContinueStory();
+        //ContinueStory();
     }
 
     private void ContinueStory() {

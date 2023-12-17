@@ -5,9 +5,7 @@ using UnityEngine.InputSystem;
 
 public class DialogueTrigger : MonoBehaviour
 {
-    [Header("Que Sign")]
     [SerializeField] private GameObject queSign;
-    [Header("Ink JSON")]
     [SerializeField] private TextAsset inkJSON;
      private bool playerInRange;
      public UserInput input;
@@ -32,9 +30,9 @@ public class DialogueTrigger : MonoBehaviour
         
         if (playerInRange){
             queSign.SetActive(true);
-            if (input.Gameplay.Talk.IsPressed()) {
-                Debug.Log("Talk is pressed");
-                //DialogueManager.GetInstance().EnterDialogueMode(inkJSON);
+            if (Input.GetKeyDown(KeyCode.Space)) {
+                //Debug.Log("Talk is pressed");
+                DialogueManager.GetInstance().EnterDialogueMode(inkJSON);
             }
         }else {
             queSign.SetActive(false);
