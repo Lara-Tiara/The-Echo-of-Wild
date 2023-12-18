@@ -33,6 +33,9 @@ public class PlayerControl : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+        if (DialogueManager.GetInstance().dialogueIsPlaying) {
+            return;
+        }
         moveDirection = controls.Gameplay._2DMovement.ReadValue<Vector2>();
         Vector2 pos = transform.position;
 		pos += moveDirection.normalized * moveSpeed * Time.fixedDeltaTime;

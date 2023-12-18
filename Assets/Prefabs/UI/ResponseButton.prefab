@@ -146,6 +146,7 @@ GameObject:
   - component: {fileID: 5556411632221747827}
   - component: {fileID: 7744914922960924157}
   - component: {fileID: 2391764403253250106}
+  - component: {fileID: 239296425150848349}
   m_Layer: 5
   m_Name: ResponseButton
   m_TagString: Untagged
@@ -255,3 +256,16 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &239296425150848349
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8874017019090244756}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83daf6a90046cc041b55d7840b3c345a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myText: {fileID: 6128241857327075788}

@@ -8,13 +8,13 @@ using UnityEngine.EventSystems;
 public class DialogueManager : MonoBehaviour
 {
     [Header("Dialogue UI")]
-    [SerializeField] private GameObject dialogueBox;
-    [SerializeField] private GameObject dialogueText;
-    private Story currentStory;
+    [SerializeField] public GameObject dialogueCanvas;
+    //[SerializeField] private TextAssetValue dialogueValue;
+    //[SerializeField] private DialogueCanvasController canvasController;
+    public Story currentStory;
     public UserInput input;
     
     public bool dialogueIsPlaying{get; set; }
-    //private bool canContinueToNextLine = false;
     private Coroutine displayLineCoroutine;
     private static DialogueManager instance;
     //private DialogueVariables dialogueVariables;
@@ -32,7 +32,7 @@ public class DialogueManager : MonoBehaviour
 
     private void Start(){
         dialogueIsPlaying = false;
-        dialogueBox.SetActive(false);
+        dialogueCanvas.SetActive(false);
     }
 
     private void Update(){
@@ -40,50 +40,27 @@ public class DialogueManager : MonoBehaviour
             return;
         }
     }
+
     public void EnterDialogueMode(TextAsset inkJSON){
         currentStory = new Story(inkJSON.text);
         dialogueIsPlaying = true;
-        dialogueBox.SetActive(true);
-
-        //dialogueVariables.StartListening(currentStory);
-
-        //ContinueStory();
+        dialogueCanvas.SetActive(true);
+        //SetStory();
+        //canvasController.RefreshView();
     }
 
-    private void ContinueStory() {
-        if (currentStory.canContinue) {
-            //dialogueText.text = currentStory.Continue();
-        } else {
-            ExitDialogueMode();
-        }
-    }
-
-    private void ExitDialogueMode() {
-        //yield return new WaitForSeconds(0.2f);
-
-        //dialogueVariables.StopListening(currentStory);
-
-        dialogueIsPlaying = false;
-        dialogueBox.SetActive(false);
-        //dialogueText.text = "";
-    }
     /*
-     private void ContinueStory() {
-        if (currentStory.canContinue) 
-        {
-            // set text for the current dialogue line
-            if (displayLineCoroutine != null) 
-            {
-                StopCoroutine(displayLineCoroutine);
-            }
-            //displayLineCoroutine = StartCoroutine(DisplayLine(currentStory.Continue()));
-            // handle tags
-            //HandleTags(currentStory.currentTags);
-        }
-        else 
-        {
-            StartCoroutine(ExitDialogueMode());
+    public void SetStory() {
+        if (dialogueValue.value) {
+            currentStory = new Story(dialogueValue.value.text);
+        } else {
+            Debug.Log("Story setup error");
         }
     }
     */
+
+    private void ExitDialogueMode() {
+        dialogueIsPlaying = false;
+        dialogueCanvas.SetActive(false);
+    }
 }
