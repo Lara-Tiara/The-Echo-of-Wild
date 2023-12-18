@@ -1,3 +1,5 @@
+INCLUDE GlobalVariables.ink
+
 Please! I need help!
 * [Ignore] Sorry, I'm a little busy right now. -> END
 * [Asking] What happened to you.
@@ -22,13 +24,16 @@ Please! I need help!
         
         
     === Refuse_Ending ===
+    ~ refuse_Lion = true
     You refused to save the lion.
     -> END
     
     === Magic_Helping ==
+    ~ save_Lion_magic = true
     You decide to use the forbidden magic to save the lion.
     -> END
     
     === Mannual_Helping ===
+    ~ save_Lion_mannual = true
     You opend the trap with your hands.
     -> END
