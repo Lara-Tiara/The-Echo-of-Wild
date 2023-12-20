@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class DialogueCanvasController : DialogueManager
+public class DialogueCanvasController : DialogueManager 
 {
     [SerializeField] private GameObject dialoguePrefab;
     [SerializeField] private GameObject choicePrefab;
@@ -12,28 +12,17 @@ public class DialogueCanvasController : DialogueManager
     [SerializeField] private GameObject choiceHolder;
     [SerializeField] private ScrollRect dialogueScroll;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public void RefreshView() {
         while (currentStory.canContinue) {
             MakeNewDialogue(currentStory.Continue());
         }
 
-        if(currentStory.currentChoices.Count > 0) {
+        if (currentStory.currentChoices.Count > 0) {
             MakeNewChoice();
         } else {
-            dialogueCanvas.SetActive(false);
+            CloseChoices();
         }
+
         StartCoroutine(ScrollCo());
     }
 
@@ -60,10 +49,20 @@ public class DialogueCanvasController : DialogueManager
         }
     }
 
-    private void MakeNewChoice() {
+    public void CloseChoices() {
         for (int i = 0; i < choiceHolder.transform.childCount; i++) {
             Destroy(choiceHolder.transform.GetChild(i).gameObject);
         }
+    }
+
+    public void CloseDialogs() {
+        for (int i = 0; i < dialogueHolder.transform.childCount; i++) {
+            Destroy(dialogueHolder.transform.GetChild(i).gameObject);
+        }
+    }
+
+    private void MakeNewChoice() {
+        CloseChoices();
 
         for (int i = 0; i < currentStory.currentChoices.Count; i++) {
             MakeNewResponse(currentStory.currentChoices[i].text, i);

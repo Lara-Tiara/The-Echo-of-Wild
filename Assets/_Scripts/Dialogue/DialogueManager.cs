@@ -9,15 +9,11 @@ public class DialogueManager : MonoBehaviour
 {
     [Header("Dialogue UI")]
     [SerializeField] public GameObject dialogueCanvas;
-    //[SerializeField] private TextAssetValue dialogueValue;
-    //[SerializeField] private DialogueCanvasController canvasController;
     public Story currentStory;
     public UserInput input;
-    
-    public bool dialogueIsPlaying{get; set; }
-    private Coroutine displayLineCoroutine;
+    public DialogueCanvasController canvasController;
+    public static bool dialogueIsPlaying;
     private static DialogueManager instance;
-    //private DialogueVariables dialogueVariables;
 
     private void Awake() {
         if(instance != null){
@@ -26,41 +22,35 @@ public class DialogueManager : MonoBehaviour
         instance = this;
     }
 
-    public static DialogueManager GetInstance(){
+    public static DialogueManager GetInstance() {
         return instance;
     }
 
-    private void Start(){
+    private void Start() {
         dialogueIsPlaying = false;
         dialogueCanvas.SetActive(false);
     }
 
-    private void Update(){
+    private void Update() {
+        Debug.Log(dialogueIsPlaying);
         if(!dialogueIsPlaying){
             return;
         }
     }
 
-    public void EnterDialogueMode(TextAsset inkJSON){
+    public void EnterDialogueMode(TextAsset inkJSON) {
         currentStory = new Story(inkJSON.text);
         dialogueIsPlaying = true;
         dialogueCanvas.SetActive(true);
-        //SetStory();
-        //canvasController.RefreshView();
+        canvasController.currentStory = currentStory;
+        canvasController.RefreshView();
     }
 
-    /*
-    public void SetStory() {
-        if (dialogueValue.value) {
-            currentStory = new Story(dialogueValue.value.text);
-        } else {
-            Debug.Log("Story setup error");
-        }
-    }
-    */
-
-    private void ExitDialogueMode() {
+    public void ExitDialogueMode() {
         dialogueIsPlaying = false;
         dialogueCanvas.SetActive(false);
+
+        canvasController.CloseDialogs();
+        canvasController.CloseChoices();
     }
 }

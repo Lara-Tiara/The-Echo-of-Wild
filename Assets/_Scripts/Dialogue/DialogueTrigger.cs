@@ -31,8 +31,12 @@ public class DialogueTrigger : MonoBehaviour
         if (playerInRange){
             queSign.SetActive(true);
             if (Input.GetKeyDown(KeyCode.Space)) {
-                Debug.Log("Talk is pressed");
-                DialogueManager.GetInstance().EnterDialogueMode(inkJSON);
+                if (!DialogueManager.dialogueIsPlaying) {
+                    DialogueManager.GetInstance().EnterDialogueMode(inkJSON);
+                } else {
+                    DialogueManager.GetInstance().ExitDialogueMode();
+                    Debug.Log("Talk is pressed");
+                }
             }
         }else {
             queSign.SetActive(false);
