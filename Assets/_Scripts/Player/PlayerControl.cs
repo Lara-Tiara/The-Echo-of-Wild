@@ -24,6 +24,13 @@ public class PlayerControl : MonoBehaviour
 	}
     void Update()
     {
+        if (DialogueManager.dialogueIsPlaying)
+        {
+            animator.SetFloat("Horizontal", 0);
+            animator.SetFloat("Vertical", 0);
+            animator.SetFloat("Speed", 0);
+            return;
+        }
         moveDirection = controls.Gameplay._2DMovement.ReadValue<Vector2>();
         animator.SetFloat("Horizontal", moveDirection.x);
         animator.SetFloat("Vertical", moveDirection.y);
@@ -33,6 +40,9 @@ public class PlayerControl : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+        if (DialogueManager.dialogueIsPlaying) {
+            return;
+        }
         moveDirection = controls.Gameplay._2DMovement.ReadValue<Vector2>();
         Vector2 pos = transform.position;
 		pos += moveDirection.normalized * moveSpeed * Time.fixedDeltaTime;
