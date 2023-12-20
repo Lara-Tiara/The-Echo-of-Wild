@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6242906298849977277}
   - component: {fileID: 6060090721646030335}
   - component: {fileID: 2207976981531712191}
+  - component: {fileID: 5150174956474762193}
   m_Layer: 5
   m_Name: DialogueCanvas
   m_TagString: Untagged
@@ -74,7 +75,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
@@ -102,6 +103,26 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &5150174956474762193
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 310420055567008593}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e2bde1a966a6e8418ed7ac02c04351b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueCanvas: {fileID: 310420055567008593}
+  canvasController: {fileID: 5150174956474762193}
+  dialoguePrefab: {fileID: 1159112393974036252, guid: ca6d240876439f8439ed856250625b44, type: 3}
+  choicePrefab: {fileID: 8874017019090244756, guid: ce4507a77bf6fa74babb831c76e4f083, type: 3}
+  dialogueValue: {fileID: 11400000, guid: b7d9854c17a2940ea8c942accf1f82f7, type: 2}
+  dialogueHolder: {fileID: 7865626852067410252}
+  choiceHolder: {fileID: 5137685630843450365}
+  dialogueScroll: {fileID: 5994331017016076457}
 --- !u!1 &1261941585220454910
 GameObject:
   m_ObjectHideFlags: 0
@@ -571,7 +592,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.0000039756947, y: -0.0000047683716}
+  m_AnchoredPosition: {x: 0.000016490065, y: -0.0000038146973}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &892630615319927354
@@ -592,7 +613,7 @@ MonoBehaviour:
     m_Top: 0
     m_Bottom: 0
   m_ChildAlignment: 1
-  m_Spacing: 8
+  m_Spacing: 2
   m_ChildForceExpandWidth: 1
   m_ChildForceExpandHeight: 0
   m_ChildControlWidth: 0
@@ -851,7 +872,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.00006995539, y: 0.000030994415}
+  m_AnchoredPosition: {x: 0.000016490065, y: -0.000006198883}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &8249923930199309304
@@ -872,7 +893,7 @@ MonoBehaviour:
     m_Top: 0
     m_Bottom: 0
   m_ChildAlignment: 1
-  m_Spacing: 8
+  m_Spacing: 2
   m_ChildForceExpandWidth: 1
   m_ChildForceExpandHeight: 0
   m_ChildControlWidth: 0
@@ -1197,7 +1218,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1968075566231144169}
   m_HandleRect: {fileID: 1426619760200180190}
   m_Direction: 2
-  m_Value: 0
+  m_Value: 1
   m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
