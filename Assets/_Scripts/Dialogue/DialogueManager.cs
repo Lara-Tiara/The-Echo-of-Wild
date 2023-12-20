@@ -8,11 +8,22 @@ using UnityEngine.EventSystems;
 public class DialogueManager : MonoBehaviour
 {
     [Header("Dialogue UI")]
+<<<<<<< HEAD
     [SerializeField] public GameObject dialogueCanvas;
     public Story currentStory;
     public UserInput input;
     public DialogueCanvasController canvasController;
     public static bool dialogueIsPlaying;
+=======
+    [SerializeField] private GameObject dialogueBox;
+    [SerializeField] private GameObject dialogueText;
+    private Story currentStory;
+    public UserInput input;
+    
+    public bool dialogueIsPlaying{get; set; }
+    //private bool canContinueToNextLine = false;
+    private Coroutine displayLineCoroutine;
+>>>>>>> parent of 5b93594f (Update)
     private static DialogueManager instance;
 
     private void Awake() {
@@ -28,7 +39,7 @@ public class DialogueManager : MonoBehaviour
 
     private void Start() {
         dialogueIsPlaying = false;
-        dialogueCanvas.SetActive(false);
+        dialogueBox.SetActive(false);
     }
 
     private void Update() {
@@ -37,6 +48,7 @@ public class DialogueManager : MonoBehaviour
             return;
         }
     }
+<<<<<<< HEAD
 
     public void EnterDialogueMode(TextAsset inkJSON) {
         currentStory = new Story(inkJSON.text);
@@ -53,4 +65,52 @@ public class DialogueManager : MonoBehaviour
         canvasController.CloseDialogs();
         canvasController.CloseChoices();
     }
+=======
+    public void EnterDialogueMode(TextAsset inkJSON){
+        currentStory = new Story(inkJSON.text);
+        dialogueIsPlaying = true;
+        dialogueBox.SetActive(true);
+
+        //dialogueVariables.StartListening(currentStory);
+
+        //ContinueStory();
+    }
+
+    private void ContinueStory() {
+        if (currentStory.canContinue) {
+            //dialogueText.text = currentStory.Continue();
+        } else {
+            ExitDialogueMode();
+        }
+    }
+
+    private void ExitDialogueMode() {
+        //yield return new WaitForSeconds(0.2f);
+
+        //dialogueVariables.StopListening(currentStory);
+
+        dialogueIsPlaying = false;
+        dialogueBox.SetActive(false);
+        //dialogueText.text = "";
+    }
+    /*
+     private void ContinueStory() {
+        if (currentStory.canContinue) 
+        {
+            // set text for the current dialogue line
+            if (displayLineCoroutine != null) 
+            {
+                StopCoroutine(displayLineCoroutine);
+            }
+            //displayLineCoroutine = StartCoroutine(DisplayLine(currentStory.Continue()));
+            // handle tags
+            //HandleTags(currentStory.currentTags);
+        }
+        else 
+        {
+            StartCoroutine(ExitDialogueMode());
+        }
+    }
+    */
+>>>>>>> parent of 5b93594f (Update)
 }

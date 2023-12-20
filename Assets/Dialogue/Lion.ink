@@ -1,3 +1,4 @@
+<<<<<<< HEAD:Assets/Dialogue/Lion.ink
 INCLUDE GlobalVariables.ink
 
 Please! I need help!
@@ -37,3 +38,7 @@ Please! I need help!
     ~ save_Lion_mannual = true
     You opend the trap with your hands.
     -> END
+=======
+this is a test
+yeah
+>>>>>>> parent of 5b93594f (Update):Assets/Dialogue/test.ink
