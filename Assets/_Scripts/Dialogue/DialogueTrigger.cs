@@ -31,17 +31,14 @@ public class DialogueTrigger : MonoBehaviour
         if (playerInRange){
             queSign.SetActive(true);
             if (Input.GetKeyDown(KeyCode.Space)) {
-<<<<<<< HEAD
                 if (!DialogueManager.dialogueIsPlaying) {
                     DialogueManager.GetInstance().EnterDialogueMode(inkJSON);
                 } else {
                     DialogueManager.GetInstance().ExitDialogueMode();
                     Debug.Log("Talk is pressed");
                 }
-=======
+
                 //Debug.Log("Talk is pressed");
-                DialogueManager.GetInstance().EnterDialogueMode(inkJSON);
->>>>>>> parent of 5b93594f (Update)
             }
         }else {
             queSign.SetActive(false);
