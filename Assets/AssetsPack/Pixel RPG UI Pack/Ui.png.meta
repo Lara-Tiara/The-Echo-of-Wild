@@ -312,7 +312,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ui_106
+      name: InfoUpdate
       rect:
         serializedVersion: 2
         x: 131
@@ -321,7 +321,7 @@ TextureImporter:
         height: 43
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 15, y: 9, z: 14, w: 8}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -2738,6 +2738,7 @@ TextureImporter:
     secondaryTextures: []
     nameFileIdTable:
       DialogueFrame: 1259064685
+      InfoUpdate: 1229097603
       SignFrame: -1196659969
       SignQue1: 30391893
       SignQue2: 1807730647
@@ -2749,7 +2750,6 @@ TextureImporter:
       Ui_103: 727769704
       Ui_104: 1814896612
       Ui_105: -376855874
-      Ui_106: 1229097603
       Ui_107: -232148354
       Ui_108: 650178256
       Ui_109: 282097368
