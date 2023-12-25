@@ -50,6 +50,3 @@ TagManager:
   - name: Player
     uniqueID: 2806393065
     locked: 0
-  - name: Dice
-    uniqueID: 2893575063
-    locked: 0
