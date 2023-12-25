@@ -61167,6 +61167,7 @@ PrefabInstance:
     - target: {fileID: 8632350818713334679, guid: c0575ae8bd54c004f905ddd6d4555aa3, type: 3}
       propertyPath: m_SizeDelta.x
       value: -176.60341
+
       objectReference: {fileID: 0}
     - target: {fileID: 8632350818713334679, guid: c0575ae8bd54c004f905ddd6d4555aa3, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -65243,3 +65244,4 @@ SceneRoots:
   - {fileID: 2012474391}
   - {fileID: 1635438870}
   - {fileID: 7293397139322932044}
+
