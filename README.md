@@ -1,5 +1,4 @@
-# COMP3218-CW2
-COMP3218 – CW2
+
 Game Design Document
 Introduction
 
