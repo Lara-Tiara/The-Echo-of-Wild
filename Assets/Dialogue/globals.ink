@@ -1,0 +1,1 @@
+VAR check_chest = false
