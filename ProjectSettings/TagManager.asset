@@ -7,6 +7,7 @@ TagManager:
   - sprite
   - raven
   - lion
+  - NPC
   layers:
   - Default
   - TransparentFX
