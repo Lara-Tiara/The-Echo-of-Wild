@@ -80,4 +80,4 @@ The Fairy: No, I don't think that is the right number.->END
 The Fairy: Yes, you are lucky, the number is seven.->Right_Answer
 
 === Fail ===
-The Fairy: No, I guess today is not your day.->Divert3     
+The Fairy: Sorry, I guess today is not your day.->Divert3     
