@@ -70,7 +70,7 @@ The Fairy: Oh, another lost person... Have you chacked the chest?
         
 === Right_Answer ===
 *[Leave] Cedric: Thank you very much!->END
-*[Greet and leave] Cedric: Thank you and I hope you can find the other guardians soon, wish you the best!
+*[Gratitude and leave] Cedric: Thank you and I hope you can find the other guardians soon, wish you the best!
     The Fairy: Thank you! And don't forget seven is the third digits.->END
 
 === Wrong_Answer ===

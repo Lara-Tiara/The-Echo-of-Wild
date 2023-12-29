@@ -12,8 +12,10 @@ GameObject:
   - component: {fileID: 6177677735578339505}
   - component: {fileID: 3866219307018124776}
   - component: {fileID: 7848510228586124552}
+  - component: {fileID: -2170165113989103361}
+  - component: {fileID: -9073191275437688425}
   m_Layer: 0
-  m_Name: lion_stand_L
+  m_Name: Lion
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -160,6 +162,42 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &-2170165113989103361
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5282665974416607309}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e7440f9c99b68d4f83f382f5562fc0e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb: {fileID: 7848510228586124552}
+  moveSpeed: 20
+  animator: {fileID: -9073191275437688425}
+--- !u!95 &-9073191275437688425
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5282665974416607309}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: ac91a362976664cdab4d8ca366ff20da, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &5733546844363113005
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -238,6 +276,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 8448473749046871980}
     m_Modifications:
+    - target: {fileID: 1269190209768771098, guid: 1d90b20f1b66a984a8220b19de6dae3a, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1269190209768771098, guid: 1d90b20f1b66a984a8220b19de6dae3a, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.5
+      objectReference: {fileID: 0}
     - target: {fileID: 1269190209768771098, guid: 1d90b20f1b66a984a8220b19de6dae3a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.05
