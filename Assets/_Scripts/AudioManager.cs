@@ -4,9 +4,9 @@ using UnityEngine.Audio;
 
 public class AudioManager : Singleton<AudioManager> {
 
-    public AudioMixer masterMixer { get { return _masterMixer; } }
+    //public AudioMixer masterMixer { get { return _masterMixer; } }
 
-    [SerializeField] private AudioMixer _masterMixer;
+    //[SerializeField] private AudioMixer _masterMixer;
 
     [SerializeField] private Sound[] sounds;
 
@@ -18,7 +18,7 @@ public class AudioManager : Singleton<AudioManager> {
             AudioSource source = sound.source;
 
             source.clip = sound.clip;
-            source.outputAudioMixerGroup = sound.outputAudioMixerGroup;
+            //source.outputAudioMixerGroup = sound.outputAudioMixerGroup;
 
             source.volume = sound.volume;
             source.pitch = sound.pitch;
@@ -26,6 +26,10 @@ public class AudioManager : Singleton<AudioManager> {
             source.loop = sound.loop;
             source.playOnAwake = sound.playOnAwake;
         }
+    }
+
+    void Start() {
+        Play("L1BGM");    
     }
 
     private Sound GetSound(string name) {
