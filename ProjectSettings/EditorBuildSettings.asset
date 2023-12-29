@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Scene2_City.unity
     guid: 0781500b1345c0c41bc4680b4f71d82b
+  - enabled: 1
+    path: Assets/Scenes/PrisonScene.unity
+    guid: abf1797403e790a4298c7e978285c0b4
   m_configObjects: {}
