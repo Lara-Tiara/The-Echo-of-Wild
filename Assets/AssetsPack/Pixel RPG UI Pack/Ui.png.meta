@@ -375,16 +375,16 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ui_110
+      name: InputField
       rect:
         serializedVersion: 2
         x: 136
-        y: 58
+        y: 59
         width: 128
         height: 43
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 12, y: 8, z: 13, w: 9}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -2735,7 +2735,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2756,7 +2756,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2777,7 +2777,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2798,7 +2798,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2823,6 +2823,7 @@ TextureImporter:
     nameFileIdTable:
       DialogueFrame: 1259064685
       InfoUpdate: 1229097603
+      InputField: -2029000351
       SignFrame: -1196659969
       SignQue1: 30391893
       SignQue2: 1807730647
@@ -2839,7 +2840,6 @@ TextureImporter:
       Ui_108: 650178256
       Ui_109: 282097368
       Ui_11: 447451785
-      Ui_110: -2029000351
       Ui_111: -1661671572
       Ui_112: -1182187617
       Ui_113: 1872841747
