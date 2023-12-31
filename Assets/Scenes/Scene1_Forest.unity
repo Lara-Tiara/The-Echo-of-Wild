@@ -68306,7 +68306,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2654473593430159314, guid: e3b09b4f351db724bbdf1442ee10e91c, type: 3}
       propertyPath: sounds.Array.data[0].name
-      value: L1BGM
+      value: BGM
       objectReference: {fileID: 0}
     - target: {fileID: 2654473593430159314, guid: e3b09b4f351db724bbdf1442ee10e91c, type: 3}
       propertyPath: sounds.Array.data[0].pitch

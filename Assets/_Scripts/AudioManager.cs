@@ -29,7 +29,7 @@ public class AudioManager : Singleton<AudioManager> {
     }
 
     void Start() {
-        Play("L1BGM");    
+        Play("BGM");    
     }
 
     private Sound GetSound(string name) {
