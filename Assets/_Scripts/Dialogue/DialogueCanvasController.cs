@@ -12,7 +12,6 @@ public class DialogueCanvasController : MonoBehaviour
     [SerializeField] private GameObject dialogueHolder;
     [SerializeField] private GameObject choiceHolder;
     [SerializeField] private ScrollRect dialogueScroll;
-
     [HideInInspector] public Story currentStory;
 
     public void RefreshView() {

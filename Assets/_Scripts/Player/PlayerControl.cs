@@ -10,7 +10,7 @@ public class PlayerControl : MonoBehaviour
     private Vector2 moveDirection;
     private InputAction move;
     [SerializeField] public float moveSpeed = 15f;
-    [SerializeField] private Animator animator;//你先演示下游戏流程吧
+    [SerializeField] private Animator animator;
 
     private void Awake() {
 		rb = this.GetComponent<Rigidbody2D>();
@@ -22,10 +22,8 @@ public class PlayerControl : MonoBehaviour
         controls.Gameplay._2DMovement.performed += ctx => _2Dmovement(ctx);
         animator = GetComponent<Animator>();
 	}
-    void Update()
-    {
-        if (DialogueManager.dialogueIsPlaying)
-        {
+    void Update() {
+        if (DialogueManager.dialogueIsPlaying || SignTrigger.isSignCanvasActive) {
             animator.SetFloat("Horizontal", 0);
             animator.SetFloat("Vertical", 0);
             animator.SetFloat("Speed", 0);
@@ -38,9 +36,8 @@ public class PlayerControl : MonoBehaviour
     }
 
     // Update is called once per frame
-    void FixedUpdate()
-    {
-        if (DialogueManager.dialogueIsPlaying) {
+    void FixedUpdate() {
+        if (DialogueManager.dialogueIsPlaying || SignTrigger.isSignCanvasActive) {
             return;
         }
         moveDirection = controls.Gameplay._2DMovement.ReadValue<Vector2>();
