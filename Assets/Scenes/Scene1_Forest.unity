@@ -61992,6 +61992,7 @@ GameObject:
   - component: {fileID: 727811116}
   - component: {fileID: 727811115}
   - component: {fileID: 727811114}
+  - component: {fileID: 727811117}
   m_Layer: 0
   m_Name: Portal
   m_TagString: Untagged
@@ -62064,8 +62065,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1120940527
-  m_SortingLayer: 2
+  m_SortingLayerID: -1488574231
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 1395762254, guid: 2784ea1ab3a8c4c479eef03389505ed6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -62093,6 +62094,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &727811117
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 727811113}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d2b83cb374f8c6e488a62ba8680134e4, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &752091497
 GameObject:
   m_ObjectHideFlags: 0
