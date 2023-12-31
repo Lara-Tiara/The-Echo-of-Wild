@@ -1,9 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
+using Ink.Runtime;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class DialogueCanvasController : DialogueManager
+public class DialogueCanvasController : MonoBehaviour
 {
     [SerializeField] private GameObject dialoguePrefab;
     [SerializeField] private GameObject choicePrefab;
@@ -11,6 +12,8 @@ public class DialogueCanvasController : DialogueManager
     [SerializeField] private GameObject dialogueHolder;
     [SerializeField] private GameObject choiceHolder;
     [SerializeField] private ScrollRect dialogueScroll;
+
+    [HideInInspector] public Story currentStory;
 
     public void RefreshView() {
         while (currentStory.canContinue) {

@@ -10,7 +10,7 @@ public class PlayerControl : MonoBehaviour
     private Vector2 moveDirection;
     private InputAction move;
     [SerializeField] public float moveSpeed = 15f;
-    [SerializeField] private Animator animator;
+    [SerializeField] private Animator animator;//你先演示下游戏流程吧
 
     private void Awake() {
 		rb = this.GetComponent<Rigidbody2D>();
