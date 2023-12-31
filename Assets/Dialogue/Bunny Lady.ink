@@ -1,7 +1,7 @@
 INCLUDE globals.ink
-
+->confrontation
 === confrontation ===
-* [Aslan Arrives] Aslan: Release the shepherd, for he has done no wrong that warrants such wrath.
+    Aslan: Release the shepherd, for he has done no wrong that warrants such wrath.
     Bunny Lady: Ah, the mighty Aslan comes forth. Your cage was comfortable, wasn't it?
     -> ConfrontationDialogue
 
