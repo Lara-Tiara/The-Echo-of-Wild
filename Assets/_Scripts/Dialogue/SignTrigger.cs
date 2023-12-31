@@ -7,6 +7,7 @@ public class SignTrigger : MonoBehaviour
 {
     [SerializeField] private GameObject queSign;
     [SerializeField] private GameObject signCanvas;
+    [SerializeField] private ChestController chestController; // Reference to ChestController
 
     private bool playerInRange;
     private bool isSignCanvasActive;
@@ -35,16 +36,27 @@ public class SignTrigger : MonoBehaviour
         if (signCanvas == null) {
             Debug.LogError("Sign Canvas is not assigned in DialogueTrigger.");
         }
+        if (chestController == null) {
+            Debug.LogError("ChestController is not assigned.");
+        }
     }
 
     private void Update() {
         queSign.SetActive(playerInRange && !isSignCanvasActive);
+        if (isSignCanvasActive && Input.GetKeyDown(KeyCode.Return)) {
+            chestController.OnSubmitCombination(); // Call when player leaves the range
+            ToggleSignCanvas(); // Close the canvas if it's open
+        }
     }
 
     private void ToggleSignCanvas() {
         if (playerInRange) {
             isSignCanvasActive = !isSignCanvasActive;
             signCanvas.SetActive(isSignCanvasActive);
+
+            if (isSignCanvasActive) {
+                chestController.OnChestInteraction(); // Call when canvas is activated
+            }
 
             Debug.Log(isSignCanvasActive ? "Talk is pressed" : "Exit sign is pressed");
         }
