@@ -2040,7 +2040,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5821871830004402100, guid: 0dbee130f82660a4eb133ddf43cf1cb5, type: 3}
       propertyPath: roomToLoad
-      value: Scene1_Forest_Lion
+      value: Scene2_City
       objectReference: {fileID: 0}
     - target: {fileID: 5821871830004402100, guid: 0dbee130f82660a4eb133ddf43cf1cb5, type: 3}
       propertyPath: sceneToLoad
