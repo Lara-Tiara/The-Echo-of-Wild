@@ -18,7 +18,7 @@ public class DialogueManager : MonoBehaviour
 
     private void Awake() {
         if(instance != null){
-            Debug.LogWarning("More than one Dialogue Manager in the scene");
+            //Destroy(gameObject);
         }
         instance = this;
     }

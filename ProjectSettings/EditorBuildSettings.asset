@@ -23,4 +23,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/PrisonScene.unity
     guid: abf1797403e790a4298c7e978285c0b4
+  - enabled: 1
+    path: Assets/Scenes/CutscenePrison.unity
+    guid: 2b5f57e9cc1ffa14c91b75864235e711
+  - enabled: 1
+    path: Assets/Scenes/Scene1_Forest_Lion.unity
+    guid: 1e675185f839f544a8eda77bd1fab865
   m_configObjects: {}
