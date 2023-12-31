@@ -13,6 +13,7 @@ public class ChestController : MonoBehaviour
     [SerializeField] private GameObject firstPlaceholder;
     [SerializeField] private GameObject secondPlaceholder;
     [SerializeField] private GameObject sceneTransition;
+    private PlayerState playerState;
 
     void Awake() {
         sceneTransition.SetActive(false);
@@ -22,6 +23,7 @@ public class ChestController : MonoBehaviour
     }
 
     public void OnChestInteraction() {
+        playerState.SetChestOpened(true);
         inputField.text = "";
         firstPlaceholder.SetActive(true);
         secondPlaceholder.SetActive(false);
