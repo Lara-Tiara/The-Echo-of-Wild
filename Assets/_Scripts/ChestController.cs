@@ -13,6 +13,7 @@ public class ChestController : MonoBehaviour
     [SerializeField] private GameObject firstPlaceholder;
     [SerializeField] private GameObject secondPlaceholder;
     [SerializeField] private GameObject sceneTransition;
+    [SerializeField] private GameObject signTrigger;
     private PlayerState playerState = new PlayerState();
 
     void Awake() {
@@ -36,15 +37,16 @@ public class ChestController : MonoBehaviour
             chestAnimator.SetTrigger("isOpen");
             chestCanvas.SetActive(false);
             AudioManager.Instance.PlayOneShot("ChestOpen");
-             StartCoroutine(portalOpen());
+            StartCoroutine(portalOpen());
+            signTrigger.SetActive(false);
 
-             SignTrigger.isSignCanvasActive = false;
+            SignTrigger.isSignCanvasActive = false;
         }
         else {
             Debug.Log("Nothing happens. It seems the combination is incorrect.");
             firstPlaceholder.SetActive(false);
             secondPlaceholder.SetActive(true);
-            // Add additional feedback for the player here
+            inputField.text = "";
         }
     }
 

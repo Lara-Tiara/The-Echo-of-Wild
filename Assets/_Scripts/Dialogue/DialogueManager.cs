@@ -33,7 +33,7 @@ public class DialogueManager : MonoBehaviour
     }
 
     private void Update(){
-        Debug.Log(dialogueIsPlaying);
+        //Debug.Log(dialogueIsPlaying);
         if(!dialogueIsPlaying){
             return;
         }

@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class SignTrigger : MonoBehaviour
+public class ChestTrigger : MonoBehaviour
 {
     [SerializeField] private GameObject queSign;
-    [SerializeField] private GameObject signCanvas;
-    //[SerializeField] private ChestController chestController;
+    [SerializeField] private GameObject chestCanvas;
+    [SerializeField] private ChestController chestController;
     
 
     private bool playerInRange;
@@ -28,38 +28,41 @@ public class SignTrigger : MonoBehaviour
 
     private void Start() {
         isSignCanvasActive = false;
-        signCanvas.SetActive(false);
+        chestCanvas.SetActive(false);
     }
 
     private void ValidateGameObjects() {
         if (queSign == null) {
             Debug.LogError("Que Sign is not assigned in DialogueTrigger.");
         }
-        if (signCanvas == null) {
+        if (chestCanvas == null) {
             Debug.LogError("Sign Canvas is not assigned in DialogueTrigger.");
         }
-        
+        if (chestController == null) {
+            Debug.LogError("ChestController is not assigned.");
+        }
     }
 
     private void Update() {
         queSign.SetActive(playerInRange && !isSignCanvasActive);
         if (isSignCanvasActive && Input.GetKeyDown(KeyCode.Return)) {
-            ToggleSignCanvas(); 
+            chestController?.OnSubmitCombination(); 
+            //ToggleSignCanvas(); 
         }
     }
 
     private void ToggleSignCanvas() {
         if (playerInRange) {
             isSignCanvasActive = !isSignCanvasActive;
-            signCanvas.SetActive(isSignCanvasActive);
+            chestCanvas.SetActive(isSignCanvasActive);
 
-            //GameDataManager.hasChest = true;
+            GameDataManager.hasChest = true;
 
             if (isSignCanvasActive) {
-                //chestController.OnChestInteraction(); 
+                chestController.OnChestInteraction(); 
             }
 
-            //Debug.Log(isSignCanvasActive ? "Talk is pressed" : "Exit sign is pressed");
+            Debug.Log(isSignCanvasActive ? "Talk is pressed" : "Exit sign is pressed");
         }
     }
 
@@ -75,3 +78,4 @@ public class SignTrigger : MonoBehaviour
         }
     }
 }
+
