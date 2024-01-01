@@ -56,6 +56,7 @@ public class PlayerControl : MonoBehaviour
     }
 
     private void OnDisable() {
+        move = controls.Gameplay._2DMovement;
         controls.Gameplay.Disable();
     }
 }
