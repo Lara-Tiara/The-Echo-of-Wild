@@ -45,19 +45,19 @@ public class DialogueTrigger : MonoBehaviour
 
     private void InterAct()
     {
-                    if (playerInRange){
-                queSign.SetActive(true);
-                if (Input.GetKeyDown(KeyCode.Space)) {
-                    if (!DialogueManager.dialogueIsPlaying) {
-                        DialogueManager.GetInstance().EnterDialogueMode(inkJSON);
-                    } else {
-                        DialogueManager.GetInstance().ExitDialogueMode();
-                        Debug.Log("Talk is pressed");
-                    }
+        if (playerInRange) {
+            queSign.SetActive(true);
+            if (Input.GetKeyDown(KeyCode.Space)) {
+                if (!DialogueManager.dialogueIsPlaying) {
+                    DialogueManager.GetInstance().EnterDialogueMode(inkJSON);
+                } else {
+                    DialogueManager.GetInstance().ExitDialogueMode();
+                    Debug.Log("Talk is pressed");
                 }
-            }else {
-                queSign.SetActive(false);
             }
+        }else {
+            queSign.SetActive(false);
+        }
     }
 
     public void Talk(InputAction.CallbackContext context) {
