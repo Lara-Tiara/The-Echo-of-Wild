@@ -221,7 +221,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2538336672740685291, guid: ca6d240876439f8439ed856250625b44, type: 3}
       propertyPath: m_text
-      value: 'The Fairy: Cedric''s bravery won''t be forgotten. '
+      value: 'Niamh: Cedric''s bravery won''t be forgotten. '
       objectReference: {fileID: 0}
     - target: {fileID: 2538336672740685291, guid: ca6d240876439f8439ed856250625b44, type: 3}
       propertyPath: m_fontSize
@@ -785,7 +785,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2538336672740685291, guid: ca6d240876439f8439ed856250625b44, type: 3}
       propertyPath: m_text
-      value: 'The Fairy: Yet, we must question if the cost of victory is too steep.'
+      value: 'Niamh: Yet, we must question if the cost of victory is too steep.'
       objectReference: {fileID: 0}
     - target: {fileID: 2538336672740685291, guid: ca6d240876439f8439ed856250625b44, type: 3}
       propertyPath: m_fontSize
@@ -1191,7 +1191,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2538336672740685291, guid: ca6d240876439f8439ed856250625b44, type: 3}
       propertyPath: m_text
-      value: 'Vespera: We must now channel our energies into defeating the Bunny
+      value: 'Saoirse: We must now channel our energies into defeating the Bunny
         Witch.'
       objectReference: {fileID: 0}
     - target: {fileID: 2538336672740685291, guid: ca6d240876439f8439ed856250625b44, type: 3}
@@ -1306,7 +1306,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2538336672740685291, guid: ca6d240876439f8439ed856250625b44, type: 3}
       propertyPath: m_text
-      value: 'Aslan: My heart grieves for Cedric, but our war against the Bunny Witch
+      value: 'Oisin: My heart grieves for Cedric, but our war against The Bunny Lady
         demands sacrifices.'
       objectReference: {fileID: 0}
     - target: {fileID: 2538336672740685291, guid: ca6d240876439f8439ed856250625b44, type: 3}
@@ -3505,8 +3505,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2538336672740685291, guid: ca6d240876439f8439ed856250625b44, type: 3}
       propertyPath: m_text
-      value: 'The Mage:  Aslan, your wisdom is vast, but was this the only way? Could
-        we not save both Eldoria and Cedric?'
+      value: 'Tadhg:  Oisin, your wisdom is vast, but was this the only way? '
       objectReference: {fileID: 0}
     - target: {fileID: 2538336672740685291, guid: ca6d240876439f8439ed856250625b44, type: 3}
       propertyPath: m_fontSize
@@ -3761,7 +3760,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2538336672740685291, guid: ca6d240876439f8439ed856250625b44, type: 3}
       propertyPath: m_text
-      value: 'The Mage:  Could we not save both Eldoria and Cedric?'
+      value: 'Tadhg:  Could we not save both Eldoria and Cedric?'
       objectReference: {fileID: 0}
     - target: {fileID: 2538336672740685291, guid: ca6d240876439f8439ed856250625b44, type: 3}
       propertyPath: m_fontSize
@@ -5577,7 +5576,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2538336672740685291, guid: ca6d240876439f8439ed856250625b44, type: 3}
       propertyPath: m_text
-      value: 'Aslan:  Our focus must remain on the greater good.'
+      value: 'Oisin:  Our focus must remain on the greater good.'
       objectReference: {fileID: 0}
     - target: {fileID: 2538336672740685291, guid: ca6d240876439f8439ed856250625b44, type: 3}
       propertyPath: m_fontSize
@@ -5691,7 +5690,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2538336672740685291, guid: ca6d240876439f8439ed856250625b44, type: 3}
       propertyPath: m_text
-      value: 'Vespera: Aslan''s decision, though painful, may have been necessary. '
+      value: 'Saoirse: Oisin''s decision, though painful, may have been necessary. '
       objectReference: {fileID: 0}
     - target: {fileID: 2538336672740685291, guid: ca6d240876439f8439ed856250625b44, type: 3}
       propertyPath: m_fontSize

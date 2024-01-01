@@ -63259,8 +63259,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2538336672740685291, guid: ca6d240876439f8439ed856250625b44, type: 3}
       propertyPath: m_text
-      value: Cedric:I never imagined our journey would lead us here, Aslan. What
-        can we do now?
+      value: 'Cedric: I never imagined our journey would lead us here, Oisin. What
+        can we do now?'
       objectReference: {fileID: 0}
     - target: {fileID: 2538336672740685291, guid: ca6d240876439f8439ed856250625b44, type: 3}
       propertyPath: m_fontSize
@@ -66381,7 +66381,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2538336672740685291, guid: ca6d240876439f8439ed856250625b44, type: 3}
       propertyPath: m_text
-      value: 'Vespera: Betrayal may wound us, but it will not break us. Our cause
+      value: 'Saoirse: Betrayal may wound us, but it will not break us. Our cause
         is just.'
       objectReference: {fileID: 0}
     - target: {fileID: 2538336672740685291, guid: ca6d240876439f8439ed856250625b44, type: 3}
@@ -66673,8 +66673,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2538336672740685291, guid: ca6d240876439f8439ed856250625b44, type: 3}
       propertyPath: m_text
-      value: 'The Mage: My brother, how could you join the oppressor? We stood for
-        justice and freedom!'
+      value: 'Tadhg: My sister, how could you join the oppressor? We stood for justice
+        and freedom!'
       objectReference: {fileID: 0}
     - target: {fileID: 2538336672740685291, guid: ca6d240876439f8439ed856250625b44, type: 3}
       propertyPath: m_fontSize
@@ -67443,7 +67443,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2538336672740685291, guid: ca6d240876439f8439ed856250625b44, type: 3}
       propertyPath: m_text
-      value: 'Aslan: Your bravery has not gone unnoticed.'
+      value: 'Oisin: Your bravery has not gone unnoticed.'
       objectReference: {fileID: 0}
     - target: {fileID: 2538336672740685291, guid: ca6d240876439f8439ed856250625b44, type: 3}
       propertyPath: m_fontSize
@@ -68091,7 +68091,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2538336672740685291, guid: ca6d240876439f8439ed856250625b44, type: 3}
       propertyPath: m_text
-      value: 'Aslan: Even in chains, the spirit of freedom endures. We must not lose
+      value: 'Oisin: Even in chains, the spirit of freedom endures. We must not lose
         hope, Cedric.'
       objectReference: {fileID: 0}
     - target: {fileID: 2538336672740685291, guid: ca6d240876439f8439ed856250625b44, type: 3}
@@ -68206,8 +68206,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2538336672740685291, guid: ca6d240876439f8439ed856250625b44, type: 3}
       propertyPath: m_text
-      value: 'Bunny Lady: See the futility of your resistance. Even your own turn
-        against you.'
+      value: 'The Bunny Lady: See the futility of your resistance. Even your own
+        turn against you.'
       objectReference: {fileID: 0}
     - target: {fileID: 2538336672740685291, guid: ca6d240876439f8439ed856250625b44, type: 3}
       propertyPath: m_fontSize
@@ -68321,7 +68321,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2538336672740685291, guid: ca6d240876439f8439ed856250625b44, type: 3}
       propertyPath: m_text
-      value: 'Warrior Mouse: Power is the only truth. The Bunny Lady offers victory,
+      value: 'Warrior Caoimhe: Power is the only truth. The Bunny Lady offers victory,
         not empty ideals.'
       objectReference: {fileID: 0}
     - target: {fileID: 2538336672740685291, guid: ca6d240876439f8439ed856250625b44, type: 3}
