@@ -1782,7 +1782,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ui_60
+      name: Credit
       rect:
         serializedVersion: 2
         x: 420
@@ -1791,7 +1791,7 @@ TextureImporter:
         height: 118
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 7, y: 9, z: 8, w: 4}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -2821,6 +2821,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
+      Credit: -79131907
       DialogueFrame: 1259064685
       InfoUpdate: 1229097603
       InputField: -2029000351
@@ -2906,7 +2907,6 @@ TextureImporter:
       Ui_58: 441550226
       Ui_59: -1421311271
       Ui_6: 666482821
-      Ui_60: -79131907
       Ui_61: 1623275470
       Ui_62: -1404178507
       Ui_63: -1424215238
