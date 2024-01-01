@@ -909,7 +909,7 @@ Transform:
   m_GameObject: {fileID: 193093491}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 9.087, y: -21.7914, z: 0}
+  m_LocalPosition: {x: 67.7, y: 9.9, z: 0}
   m_LocalScale: {x: 7.079851, y: 7.079851, z: 7.079851}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -67186,11 +67186,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4292889783658624382, guid: 422b22ed232e25a459e2284b724e72da, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -17.6
+      value: 53.2
       objectReference: {fileID: 0}
     - target: {fileID: 4292889783658624382, guid: 422b22ed232e25a459e2284b724e72da, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 14.9
+      value: 10.8
       objectReference: {fileID: 0}
     - target: {fileID: 4292889783658624382, guid: 422b22ed232e25a459e2284b724e72da, type: 3}
       propertyPath: m_LocalPosition.z
@@ -67575,6 +67575,10 @@ PrefabInstance:
     - target: {fileID: 18470876157154695, guid: 5c6a3dae3a9d65640b797829f8b41672, type: 3}
       propertyPath: m_Name
       value: SignQue1
+      objectReference: {fileID: 0}
+    - target: {fileID: 18470876157154695, guid: 5c6a3dae3a9d65640b797829f8b41672, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8724888708841598185, guid: 5c6a3dae3a9d65640b797829f8b41672, type: 3}
       propertyPath: m_LocalScale.x
@@ -68124,13 +68128,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: Mage Mouse
       objectReference: {fileID: 0}
+    - target: {fileID: 5367852589540427674, guid: 32e6ef34abae72e47b78955afe1a1f42, type: 3}
+      propertyPath: inkJSON
+      value: 
+      objectReference: {fileID: 4900000, guid: 49910f5c04de0ad46b69577dc8aad152, type: 3}
     - target: {fileID: 8126550711388526684, guid: 32e6ef34abae72e47b78955afe1a1f42, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -8.35
+      value: 57.4
       objectReference: {fileID: 0}
     - target: {fileID: 8126550711388526684, guid: 32e6ef34abae72e47b78955afe1a1f42, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.14
+      value: 16.3
       objectReference: {fileID: 0}
     - target: {fileID: 8126550711388526684, guid: 32e6ef34abae72e47b78955afe1a1f42, type: 3}
       propertyPath: m_LocalPosition.z
@@ -68164,6 +68172,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9133394211411082568, guid: 32e6ef34abae72e47b78955afe1a1f42, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -68180,6 +68192,10 @@ PrefabInstance:
     - target: {fileID: 18470876157154695, guid: 5c6a3dae3a9d65640b797829f8b41672, type: 3}
       propertyPath: m_Name
       value: SignQue1
+      objectReference: {fileID: 0}
+    - target: {fileID: 18470876157154695, guid: 5c6a3dae3a9d65640b797829f8b41672, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8724888708841598185, guid: 5c6a3dae3a9d65640b797829f8b41672, type: 3}
       propertyPath: m_LocalScale.x
@@ -68509,11 +68525,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2721086121381158595, guid: 31c5ca9efadc78f4894b9604142aea2d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -18.31
+      value: 45.8
       objectReference: {fileID: 0}
     - target: {fileID: 2721086121381158595, guid: 31c5ca9efadc78f4894b9604142aea2d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.14
+      value: 11.9
       objectReference: {fileID: 0}
     - target: {fileID: 2721086121381158595, guid: 31c5ca9efadc78f4894b9604142aea2d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -68547,9 +68563,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3259045131670671137, guid: 31c5ca9efadc78f4894b9604142aea2d, type: 3}
+      propertyPath: inkJSON
+      value: 
+      objectReference: {fileID: 4900000, guid: 4adfc9c37bfae094e94bf54065b4f9bd, type: 3}
     - target: {fileID: 3998672058554008015, guid: 31c5ca9efadc78f4894b9604142aea2d, type: 3}
       propertyPath: m_Name
       value: W_witch
+      objectReference: {fileID: 0}
+    - target: {fileID: 7893140682507352765, guid: 31c5ca9efadc78f4894b9604142aea2d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -68566,11 +68590,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3852567664926240378, guid: 291f2891e468dd640895b03c49c509dd, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -14.8725
+      value: 49.8
       objectReference: {fileID: 0}
     - target: {fileID: 3852567664926240378, guid: 291f2891e468dd640895b03c49c509dd, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.9825
+      value: 4.8
       objectReference: {fileID: 0}
     - target: {fileID: 3852567664926240378, guid: 291f2891e468dd640895b03c49c509dd, type: 3}
       propertyPath: m_LocalPosition.z
@@ -68608,6 +68632,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fairy
       objectReference: {fileID: 0}
+    - target: {fileID: 8126214771268783694, guid: 291f2891e468dd640895b03c49c509dd, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8288308228881696945, guid: 291f2891e468dd640895b03c49c509dd, type: 3}
+      propertyPath: inkJSON
+      value: 
+      objectReference: {fileID: 4900000, guid: 4f7ab0a6e9c83074791383d0d354a537, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
