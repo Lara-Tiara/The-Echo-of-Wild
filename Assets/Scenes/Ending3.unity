@@ -221,8 +221,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2538336672740685291, guid: ca6d240876439f8439ed856250625b44, type: 3}
       propertyPath: m_text
-      value: 'The Mage: We must prepare, learn from this, and plan our next move
-        carefully.'
+      value: 'Tadhg: We must prepare, learn from this, and plan our next move carefully.'
       objectReference: {fileID: 0}
     - target: {fileID: 2538336672740685291, guid: ca6d240876439f8439ed856250625b44, type: 3}
       propertyPath: m_fontSize
@@ -54045,7 +54044,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2538336672740685291, guid: ca6d240876439f8439ed856250625b44, type: 3}
       propertyPath: m_text
-      value: 'The Mage: The Bunny Lady''s power remains.'
+      value: 'Tadhg: The Bunny Lady''s power remains.'
       objectReference: {fileID: 0}
     - target: {fileID: 2538336672740685291, guid: ca6d240876439f8439ed856250625b44, type: 3}
       propertyPath: m_fontSize
@@ -55349,7 +55348,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2538336672740685291, guid: ca6d240876439f8439ed856250625b44, type: 3}
       propertyPath: m_text
-      value: 'Vespera: Together, we can forge a new path.'
+      value: 'Saoirse: Together, we can forge a new path.'
       objectReference: {fileID: 0}
     - target: {fileID: 2538336672740685291, guid: ca6d240876439f8439ed856250625b44, type: 3}
       propertyPath: m_fontSize
@@ -55621,7 +55620,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2538336672740685291, guid: ca6d240876439f8439ed856250625b44, type: 3}
       propertyPath: m_text
-      value: 'Aslan: Your bravery has not gone unnoticed.'
+      value: 'Oisin: Your bravery has not gone unnoticed.'
       objectReference: {fileID: 0}
     - target: {fileID: 2538336672740685291, guid: ca6d240876439f8439ed856250625b44, type: 3}
       propertyPath: m_fontSize
@@ -58223,7 +58222,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2538336672740685291, guid: ca6d240876439f8439ed856250625b44, type: 3}
       propertyPath: m_text
-      value: 'Vespera: Eldoria''s future is not yet lost.'
+      value: 'Saoirse: Eldoria''s future is not yet lost.'
       objectReference: {fileID: 0}
     - target: {fileID: 2538336672740685291, guid: ca6d240876439f8439ed856250625b44, type: 3}
       propertyPath: m_fontSize
@@ -58427,7 +58426,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2538336672740685291, guid: ca6d240876439f8439ed856250625b44, type: 3}
       propertyPath: m_text
-      value: 'Aslan:  We must use this second chance wisely.'
+      value: 'Oisin:  We must use this second chance wisely.'
       objectReference: {fileID: 0}
     - target: {fileID: 2538336672740685291, guid: ca6d240876439f8439ed856250625b44, type: 3}
       propertyPath: m_fontSize
@@ -58895,7 +58894,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2538336672740685291, guid: ca6d240876439f8439ed856250625b44, type: 3}
       propertyPath: m_text
-      value: 'The Fairy: They''ve ignited a spark of hope.'
+      value: 'Niamh: They''ve ignited a spark of hope.'
       objectReference: {fileID: 0}
     - target: {fileID: 2538336672740685291, guid: ca6d240876439f8439ed856250625b44, type: 3}
       propertyPath: m_fontSize
@@ -59437,7 +59436,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2538336672740685291, guid: ca6d240876439f8439ed856250625b44, type: 3}
       propertyPath: m_text
-      value: 'The Fairy: Aslan, your words have saved more than just a life today.'
+      value: 'Niamh: Oisin, your words have saved more than just a life today.'
       objectReference: {fileID: 0}
     - target: {fileID: 2538336672740685291, guid: ca6d240876439f8439ed856250625b44, type: 3}
       propertyPath: m_fontSize
