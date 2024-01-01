@@ -8,6 +8,7 @@ public class SignTrigger : MonoBehaviour
     [SerializeField] private GameObject queSign;
     [SerializeField] private GameObject signCanvas;
     [SerializeField] private ChestController chestController;
+    
 
     private bool playerInRange;
     public static bool isSignCanvasActive;
@@ -19,7 +20,7 @@ public class SignTrigger : MonoBehaviour
 
         playerInRange = false;
         
-
+        //chestController = transform.parent.GetComponent<ChestController>();
         ValidateGameObjects();
 
         input.Gameplay.Talk.performed += ctx => ToggleSignCanvas();
@@ -45,8 +46,8 @@ public class SignTrigger : MonoBehaviour
     private void Update() {
         queSign.SetActive(playerInRange && !isSignCanvasActive);
         if (isSignCanvasActive && Input.GetKeyDown(KeyCode.Return)) {
-            chestController.OnSubmitCombination(); 
-            ToggleSignCanvas(); 
+            chestController?.OnSubmitCombination(); 
+            //ToggleSignCanvas(); 
         }
     }
 
@@ -54,6 +55,8 @@ public class SignTrigger : MonoBehaviour
         if (playerInRange) {
             isSignCanvasActive = !isSignCanvasActive;
             signCanvas.SetActive(isSignCanvasActive);
+
+            GameDataManager.hasChest = true;
 
             if (isSignCanvasActive) {
                 chestController.OnChestInteraction(); 

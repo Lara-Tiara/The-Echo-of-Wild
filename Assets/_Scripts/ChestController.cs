@@ -13,7 +13,7 @@ public class ChestController : MonoBehaviour
     [SerializeField] private GameObject firstPlaceholder;
     [SerializeField] private GameObject secondPlaceholder;
     [SerializeField] private GameObject sceneTransition;
-    private PlayerState playerState;
+    private PlayerState playerState = new PlayerState();
 
     void Awake() {
         sceneTransition.SetActive(false);
@@ -37,6 +37,8 @@ public class ChestController : MonoBehaviour
             chestCanvas.SetActive(false);
             AudioManager.Instance.PlayOneShot("ChestOpen");
              StartCoroutine(portalOpen());
+
+             SignTrigger.isSignCanvasActive = false;
         }
         else {
             Debug.Log("Nothing happens. It seems the combination is incorrect.");
