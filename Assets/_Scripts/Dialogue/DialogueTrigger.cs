@@ -5,6 +5,8 @@ using UnityEngine.InputSystem;
 
 public class DialogueTrigger : MonoBehaviour
 {
+    public string targetTag = "Player";
+    public bool isNeedChest;
     [SerializeField] private GameObject queSign;
     [SerializeField] private TextAsset inkJSON;
      private bool playerInRange;
@@ -28,32 +30,47 @@ public class DialogueTrigger : MonoBehaviour
             return; 
         }
         
-        if (playerInRange){
-            queSign.SetActive(true);
-            if (Input.GetKeyDown(KeyCode.Space)) {
-                if (!DialogueManager.dialogueIsPlaying) {
-                    DialogueManager.GetInstance().EnterDialogueMode(inkJSON);
-                } else {
-                    DialogueManager.GetInstance().ExitDialogueMode();
-                    Debug.Log("Talk is pressed");
-                }
-            }
-        }else {
-            queSign.SetActive(false);
+        if(!isNeedChest)
+        {
+            InterAct();
         }
+        else
+        {
+            if(GameDataManager.hasChest)
+            {
+                InterAct();
+            }
+        }
+    }
+
+    private void InterAct()
+    {
+                    if (playerInRange){
+                queSign.SetActive(true);
+                if (Input.GetKeyDown(KeyCode.Space)) {
+                    if (!DialogueManager.dialogueIsPlaying) {
+                        DialogueManager.GetInstance().EnterDialogueMode(inkJSON);
+                    } else {
+                        DialogueManager.GetInstance().ExitDialogueMode();
+                        Debug.Log("Talk is pressed");
+                    }
+                }
+            }else {
+                queSign.SetActive(false);
+            }
     }
 
     public void Talk(InputAction.CallbackContext context) {
         
     }
     public virtual void OnTriggerEnter2D(Collider2D other) {
-        if (other.gameObject.tag == "Player") {
+        if (other.gameObject.tag == targetTag) {
             playerInRange = true;
         }
     }
 
     public virtual void OnTriggerExit2D(Collider2D other) {
-        if (other.gameObject.tag == "Player") {
+        if (other.gameObject.tag == targetTag) {
             playerInRange = false;
         }
     }
