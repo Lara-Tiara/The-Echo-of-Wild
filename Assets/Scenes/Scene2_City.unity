@@ -1773,6 +1773,10 @@ PrefabInstance:
       propertyPath: queSign
       value: 
       objectReference: {fileID: 399973871}
+    - target: {fileID: 5982555763365509984, guid: af42809ec0faa254d8aec00db4785a99, type: 3}
+      propertyPath: targetTag
+      value: lion
+      objectReference: {fileID: 0}
     - target: {fileID: 7487859727129609206, guid: af42809ec0faa254d8aec00db4785a99, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -55162,15 +55166,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4292889783658624382, guid: 422b22ed232e25a459e2284b724e72da, type: 3}
       propertyPath: m_LocalScale.x
-      value: 3
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4292889783658624382, guid: 422b22ed232e25a459e2284b724e72da, type: 3}
       propertyPath: m_LocalScale.y
-      value: 3
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4292889783658624382, guid: 422b22ed232e25a459e2284b724e72da, type: 3}
       propertyPath: m_LocalScale.z
-      value: 3
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4292889783658624382, guid: 422b22ed232e25a459e2284b724e72da, type: 3}
       propertyPath: m_LocalPosition.x
@@ -55649,7 +55653,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -2170165113989103361, guid: b02939f5edb341b439959edb76dcfd94, type: 3}
       propertyPath: runSpeed
-      value: 20
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: -2170165113989103361, guid: b02939f5edb341b439959edb76dcfd94, type: 3}
       propertyPath: moveSpeed
@@ -55665,7 +55669,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5282665974416607309, guid: b02939f5edb341b439959edb76dcfd94, type: 3}
       propertyPath: m_TagString
-      value: Player
+      value: lion
       objectReference: {fileID: 0}
     - target: {fileID: 6177677735578339505, guid: b02939f5edb341b439959edb76dcfd94, type: 3}
       propertyPath: m_SortingOrder

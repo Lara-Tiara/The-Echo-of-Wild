@@ -9,8 +9,8 @@ public class LionController : MonoBehaviour
     public UserInput controls;
     private Vector2 moveDirection;
     private InputAction move;
-    [SerializeField] public float moveSpeed = 15f;
-    [SerializeField] public float runSpeed = 30f; // Running speed
+    [SerializeField] public float moveSpeed;
+    [SerializeField] public float runSpeed;
     [SerializeField] private Animator animator;
     private bool isRunning = false;
 
