@@ -2608,7 +2608,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isFadeIn: 1
-  tranSpeed: 0.05
+  tranSpeed: 0.1
   img: {fileID: 1097608077}
 --- !u!114 &335658707
 MonoBehaviour:
@@ -3110,7 +3110,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2654473593430159314, guid: e3b09b4f351db724bbdf1442ee10e91c, type: 3}
       propertyPath: sounds.Array.size
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2654473593430159314, guid: e3b09b4f351db724bbdf1442ee10e91c, type: 3}
       propertyPath: sounds.Array.data[0].clip
@@ -3125,15 +3125,59 @@ PrefabInstance:
       value: BGM
       objectReference: {fileID: 0}
     - target: {fileID: 2654473593430159314, guid: e3b09b4f351db724bbdf1442ee10e91c, type: 3}
+      propertyPath: sounds.Array.data[1].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: cfce0cea076109f478783201b2a9f57f, type: 3}
+    - target: {fileID: 2654473593430159314, guid: e3b09b4f351db724bbdf1442ee10e91c, type: 3}
+      propertyPath: sounds.Array.data[1].loop
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2654473593430159314, guid: e3b09b4f351db724bbdf1442ee10e91c, type: 3}
+      propertyPath: sounds.Array.data[1].name
+      value: Magic
+      objectReference: {fileID: 0}
+    - target: {fileID: 2654473593430159314, guid: e3b09b4f351db724bbdf1442ee10e91c, type: 3}
+      propertyPath: sounds.Array.data[2].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: b7f8695cf65a4f24eb37544298821146, type: 3}
+    - target: {fileID: 2654473593430159314, guid: e3b09b4f351db724bbdf1442ee10e91c, type: 3}
+      propertyPath: sounds.Array.data[2].name
+      value: Force
+      objectReference: {fileID: 0}
+    - target: {fileID: 2654473593430159314, guid: e3b09b4f351db724bbdf1442ee10e91c, type: 3}
       propertyPath: sounds.Array.data[0].pitch
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2654473593430159314, guid: e3b09b4f351db724bbdf1442ee10e91c, type: 3}
+      propertyPath: sounds.Array.data[1].pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2654473593430159314, guid: e3b09b4f351db724bbdf1442ee10e91c, type: 3}
+      propertyPath: sounds.Array.data[2].pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2654473593430159314, guid: e3b09b4f351db724bbdf1442ee10e91c, type: 3}
       propertyPath: sounds.Array.data[0].volume
-      value: 0.34
+      value: 0.21
+      objectReference: {fileID: 0}
+    - target: {fileID: 2654473593430159314, guid: e3b09b4f351db724bbdf1442ee10e91c, type: 3}
+      propertyPath: sounds.Array.data[1].volume
+      value: 0.45
+      objectReference: {fileID: 0}
+    - target: {fileID: 2654473593430159314, guid: e3b09b4f351db724bbdf1442ee10e91c, type: 3}
+      propertyPath: sounds.Array.data[2].volume
+      value: 0.45
       objectReference: {fileID: 0}
     - target: {fileID: 2654473593430159314, guid: e3b09b4f351db724bbdf1442ee10e91c, type: 3}
       propertyPath: sounds.Array.data[0].playOnAwake
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2654473593430159314, guid: e3b09b4f351db724bbdf1442ee10e91c, type: 3}
+      propertyPath: sounds.Array.data[1].playOnAwake
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2654473593430159314, guid: e3b09b4f351db724bbdf1442ee10e91c, type: 3}
+      propertyPath: sounds.Array.data[2].playOnAwake
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -3288,6 +3332,10 @@ PrefabInstance:
       value: Lion
       objectReference: {fileID: 0}
     - target: {fileID: 7848510228586124552, guid: b02939f5edb341b439959edb76dcfd94, type: 3}
+      propertyPath: m_Mass
+      value: 50000
+      objectReference: {fileID: 0}
+    - target: {fileID: 7848510228586124552, guid: b02939f5edb341b439959edb76dcfd94, type: 3}
       propertyPath: m_BodyType
       value: 0
       objectReference: {fileID: 0}
@@ -3301,7 +3349,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8260221981559727249, guid: b02939f5edb341b439959edb76dcfd94, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8448473749046871980, guid: b02939f5edb341b439959edb76dcfd94, type: 3}
       propertyPath: m_LocalScale.x

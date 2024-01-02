@@ -62625,7 +62625,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isFadeIn: 0
-  tranSpeed: 0.05
+  tranSpeed: 0.1
   img: {fileID: 2021504034}
 --- !u!114 &272081887
 MonoBehaviour:

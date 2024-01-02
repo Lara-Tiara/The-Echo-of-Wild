@@ -4,6 +4,7 @@ using TMPro;
 using UnityEngine;
 using Ink.Runtime;
 using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
 
 public class DialogueManager : MonoBehaviour
 {
@@ -40,13 +41,23 @@ public class DialogueManager : MonoBehaviour
     }
 
     public void EnterDialogueMode(TextAsset inkJSON){
-        currentStory = new Story(inkJSON.text);
-        dialogueIsPlaying = true;
-        dialogueCanvas.SetActive(true);
-       
-        canvasController.currentStory = currentStory;
-        canvasController.RefreshView();
-    }
+    currentStory = new Story(inkJSON.text);
+
+    currentStory.BindExternalFunction("playSound", (string name) => {
+        AudioManager.Instance.PlayOneShot(name);
+    });
+
+    currentStory.BindExternalFunction("loadScene", (string sceneName) => {
+        SceneManager.LoadScene(sceneName);
+    });
+
+    dialogueIsPlaying = true;
+    dialogueCanvas.SetActive(true);
+   
+    canvasController.currentStory = currentStory;
+    canvasController.RefreshView();
+}
+
 
     public void ExitDialogueMode() {
         dialogueIsPlaying = false;

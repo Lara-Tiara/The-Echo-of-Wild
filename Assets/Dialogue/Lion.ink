@@ -1,3 +1,6 @@
+ EXTERNAL playSound(soundName)
+ EXTERNAL loadScene(sceneName)
+
 Please! I need help!
 * [Ignore] Sorry, I'm a little busy right now. -> END
 * [Asking] What happened to you.
@@ -15,20 +18,30 @@ Please! I need help!
             Of course not, I would never hurt someone who saved me. But of course, I would not let go those who hurt me.
             *** [How can I help you] Let me see... This is a tight trap.
                 If you can use your magic to unlock me...
-                **** [Use Magic] -> Magic_Helping
-                //触发魔法动画和音效
-                **** [Use Brutal Force] -> Mannual_Helping
-                //触发大力出奇迹动画和音效
+                **** [Use Magic] //触发魔法音效
+                ~ playSound("Magic") 
+                -> Magic_Helping
+                
+                
+                **** [Use Brutal Force] //触发大力出奇迹音效
+                ~ playSound("Force")
+                -> Mannual_Helping
+                
         
         
     === Refuse_Ending ===
     You refused to save the lion.
+    ~ loadScene("Ending1")
     -> END
     
     === Magic_Helping ==
-    You decide to use the forbidden magic to save the lion.
+    You decide to use the forbidden magic to save the lion. 
+    * [Leave]
+    ~ loadScene("CutscenePrison")
     -> END
     
     === Mannual_Helping ===
     You opend the trap with your hands.
+    * [Leave]
+    ~ loadScene("CutscenePrison")
     -> END

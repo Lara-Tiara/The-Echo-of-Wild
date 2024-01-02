@@ -1,4 +1,6 @@
 INCLUDE globals.ink
+EXTERNAL loadScene(sceneName)
+ 
 ->confrontation
 === confrontation ===
     Aslan: Release the shepherd, for he has done no wrong that warrants such wrath.
@@ -46,9 +48,11 @@ Bunny Lady: Then you leave me no choice. Guards!
 === ReleaseCedric ===
 * [Cedric is Released] Bunny Lady: Take your shepherd and leave my sight.
     Aslan: Come, Cedric. You are safe now.
+    ~ loadScene("Ending3")
     -> END
 
 === PunishBoth ===
 * [Both Punished] Bunny Lady: Take them both away!
     Aslan: Fear not, Cedric. This is not the end.
+    ~ loadScene("Ending4")
     -> END
