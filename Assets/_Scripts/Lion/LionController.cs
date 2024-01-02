@@ -52,8 +52,8 @@ public class LionController : MonoBehaviour
     }
 
     public void ToggleRun() {
-        isRunning = !isRunning; // Toggle the running state
-        animator.SetBool("Run", isRunning); // Update the Run parameter in the animator
+        isRunning = !isRunning; 
+        animator.SetBool("Run", isRunning); 
     }
 
     private void UpdateAnimator(Vector2 direction) {
