@@ -44,6 +44,15 @@ public partial class @UserInput: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""Run"",
+                    ""type"": ""Button"",
+                    ""id"": ""7c4b9210-118e-427a-af5a-d1e3f27352ff"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
                 }
             ],
             ""bindings"": [
@@ -156,6 +165,17 @@ public partial class @UserInput: IInputActionCollection2, IDisposable
                     ""action"": ""2D Movement"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""b60d9cb3-1045-4312-a8b4-3f81088f0131"",
+                    ""path"": ""<Keyboard>/ctrl"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Run"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         },
@@ -682,6 +702,7 @@ public partial class @UserInput: IInputActionCollection2, IDisposable
         m_Gameplay = asset.FindActionMap("Gameplay", throwIfNotFound: true);
         m_Gameplay_Talk = m_Gameplay.FindAction("Talk", throwIfNotFound: true);
         m_Gameplay__2DMovement = m_Gameplay.FindAction("2D Movement", throwIfNotFound: true);
+        m_Gameplay_Run = m_Gameplay.FindAction("Run", throwIfNotFound: true);
         // UI
         m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
         m_UI_TrackedDeviceOrientation = m_UI.FindAction("TrackedDeviceOrientation", throwIfNotFound: true);
@@ -757,12 +778,14 @@ public partial class @UserInput: IInputActionCollection2, IDisposable
     private List<IGameplayActions> m_GameplayActionsCallbackInterfaces = new List<IGameplayActions>();
     private readonly InputAction m_Gameplay_Talk;
     private readonly InputAction m_Gameplay__2DMovement;
+    private readonly InputAction m_Gameplay_Run;
     public struct GameplayActions
     {
         private @UserInput m_Wrapper;
         public GameplayActions(@UserInput wrapper) { m_Wrapper = wrapper; }
         public InputAction @Talk => m_Wrapper.m_Gameplay_Talk;
         public InputAction @_2DMovement => m_Wrapper.m_Gameplay__2DMovement;
+        public InputAction @Run => m_Wrapper.m_Gameplay_Run;
         public InputActionMap Get() { return m_Wrapper.m_Gameplay; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -778,6 +801,9 @@ public partial class @UserInput: IInputActionCollection2, IDisposable
             @_2DMovement.started += instance.On_2DMovement;
             @_2DMovement.performed += instance.On_2DMovement;
             @_2DMovement.canceled += instance.On_2DMovement;
+            @Run.started += instance.OnRun;
+            @Run.performed += instance.OnRun;
+            @Run.canceled += instance.OnRun;
         }
 
         private void UnregisterCallbacks(IGameplayActions instance)
@@ -788,6 +814,9 @@ public partial class @UserInput: IInputActionCollection2, IDisposable
             @_2DMovement.started -= instance.On_2DMovement;
             @_2DMovement.performed -= instance.On_2DMovement;
             @_2DMovement.canceled -= instance.On_2DMovement;
+            @Run.started -= instance.OnRun;
+            @Run.performed -= instance.OnRun;
+            @Run.canceled -= instance.OnRun;
         }
 
         public void RemoveCallbacks(IGameplayActions instance)
@@ -927,6 +956,7 @@ public partial class @UserInput: IInputActionCollection2, IDisposable
     {
         void OnTalk(InputAction.CallbackContext context);
         void On_2DMovement(InputAction.CallbackContext context);
+        void OnRun(InputAction.CallbackContext context);
     }
     public interface IUIActions
     {

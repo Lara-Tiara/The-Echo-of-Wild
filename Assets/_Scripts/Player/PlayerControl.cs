@@ -41,9 +41,11 @@ public class PlayerControl : MonoBehaviour
             return;
         }
         moveDirection = controls.Gameplay._2DMovement.ReadValue<Vector2>();
-        Vector2 pos = transform.position;
-		pos += moveDirection.normalized * moveSpeed * Time.fixedDeltaTime;
-        transform.position = pos;
+        rb.velocity = new Vector2(moveDirection.x * moveSpeed, moveDirection.y * moveSpeed);
+        //rb.MovePosition(rb.position + moveDirection * moveSpeed * Time.fixedDeltaTime);
+        //Vector2 pos = transform.position;
+		//pos += moveDirection.normalized * moveSpeed;
+        //transform.position = pos;
     }
 
     public void _2Dmovement(InputAction.CallbackContext context) {
