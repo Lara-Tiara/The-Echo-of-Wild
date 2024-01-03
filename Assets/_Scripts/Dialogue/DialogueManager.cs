@@ -62,8 +62,6 @@ public class DialogueManager : MonoBehaviour
             SceneManager.LoadScene(sceneName);
         });
 
-        
-
         dialogueIsPlaying = true;
         dialogueCanvas.SetActive(true);
 

@@ -1,4 +1,5 @@
 INCLUDE globals.ink
+
 Saoirse: Great power comes with great responsibility.
 -> SaoirseEncounter
 === SaoirseEncounter ===
@@ -10,7 +11,6 @@ Saoirse: Great power comes with great responsibility.
     * [Ask for help] Cedric: I seek secrets about the Arcanum Chest. Can you assist me?
         Saoirse: Indeed I know the number. But not everyone is the right person to share the secret.
             ** [Use magic SECRETLY] Oh is that true?
-            ~ magic_Saoirse = true
             {~->Success|->Fail}
             ** [Ask sincerely] How to prove that I am the right person?-> ConverseWithSaoirse
 
@@ -54,7 +54,6 @@ Saoirse: Great power comes with great responsibility.
 === CorrectAnswer ===
     *[Leave] Cedric: Thank you for your guidance!->END
     *[Gratitude and leave] Cedric: Your wisdom is unparalleled. I'm grateful.
-    ~ greet_Saoirse = true
     Saoirse: Farewell, Cedric. Remember, three holds the second position.->END
         
 === WrongAnswer ===
@@ -67,7 +66,8 @@ Saoirse: What did you do? You sly young man!->END
 === Fail ====
 Saoirse: Perhaps your power is not as strong as you think.
 *[Leave] I would be powerful one day.->END
-*[Try your Wisdom] I think I can still get the number without using of magic.-> ConverseWithSaoirse
+*[Try your Wisdom] I think I can still get the number without using of magic.
+-> ConverseWithSaoirse
 
 
 
