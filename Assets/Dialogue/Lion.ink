@@ -1,47 +1,50 @@
- EXTERNAL playSound(soundName)
- EXTERNAL loadScene(sceneName)
+INCLUDE globals.ink
+EXTERNAL playSound(soundName)
+EXTERNAL loadScene(sceneName)
 
-Please! I need help!
-* [Ignore] Sorry, I'm a little busy right now. -> END
-* [Asking] What happened to you.
+Cedric: Please! I need help!
+* [Ignore] Cedric: Sorry, I'm a little busy right now. -> END
+* [Asking] Cedric: What happened to you?
     -> Divert1
-    
-    == Divert1 ==
-    Someone put a trap here, and I accidentally dropped in it.
-    * [Who did this to you] Do you have any idea who put this trap here?
-        I have no idea, maybe the guard at the end of the forest would know.
-        ** [Go Back] -> Divert1
-    * [What do you want] What do you want?
-        Could you help me get rid of this trap please?
-        ** [No] I don't think this is a good idea to let a such dangerous lion out... -> Refuse_Ending
-        ** [Yes] Sure, I would love to help a lion, you are not going to bite me right?
-            Of course not, I would never hurt someone who saved me. But of course, I would not let go those who hurt me.
-            *** [How can I help you] Let me see... This is a tight trap.
-                If you can use your magic to unlock me...
-                **** [Use Magic] //触发魔法音效
-                ~ playSound("Magic") 
+
+== Divert1 ==
+Oisin: I was entrapped here by the Bunny Lady's scheme. 
+Oisin: Had you not opened the chest and discovered the true essence of the Echo of the Wild,
+Oisin: I would have remained undiscovered forever.
+* [Who did this to you] Cedric: Do you have any idea who might have set this trap?
+    Oisin: I suspect the guards of the Bunny Lady. 
+    Oisin: She's determined to prevent any challenge to her rule, 
+    Oisin: even if it means trapping the guardians of the forest.
+    ** [Go Back] -> Divert1
+* [What do you want] Cedric: What can I do to help you?
+    Oisin: Could you help me escape from this trap, please?
+    ** [No] Cedric: I'm not sure it's safe to release a lion, even one as grand as yourself...
+        -> Refuse_Ending
+    ** [Yes (Risky)] Cedric: Of course, I'll help. You won't harm me, will you?
+        Oisin: Never. I would never harm someone who is trying to save me. But I won't forget those who have tricked me.
+        *** [How can I help you] Cedric: Let me see... This trap is tightly secured.
+            Oisin: If you could use some magic to free me...
+            **** [Use Magic] Cedric: I'll try using a spell.
+                ~ playSound("Magic")
                 -> Magic_Helping
                 
-                
-                **** [Use Brutal Force] //触发大力出奇迹音效
+            **** [Use Brute Force] Cedric: Let's try the old-fashioned way.
                 ~ playSound("Force")
-                -> Mannual_Helping
-                
-        
-        
-    === Refuse_Ending ===
-    You refused to save the lion.
-    ~ loadScene("Ending1")
-    -> END
-    
-    === Magic_Helping ==
-    You decide to use the forbidden magic to save the lion. 
-    * [Leave]
-    ~ loadScene("CutscenePrison")
-    -> END
-    
-    === Mannual_Helping ===
-    You opend the trap with your hands.
-    * [Leave]
-    ~ loadScene("CutscenePrison")
-    -> END
+                -> Manual_Helping
+
+=== Refuse_Ending ===
+Cedric: You refused to help the lion.
+~ loadScene("Ending1")
+-> END
+
+=== Magic_Helping ===
+Cedric: You decide to use forbidden magic to rescue the lion.
+* [Leave]
+~ loadScene("CutscenePrison")
+-> END
+
+=== Manual_Helping ===
+Cedric: You manage to free the lion using brute force.
+* [Leave]
+~ loadScene("CutscenePrison")
+-> END

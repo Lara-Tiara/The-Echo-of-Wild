@@ -10,6 +10,7 @@ Saoirse: Great power comes with great responsibility.
     * [Ask for help] Cedric: I seek secrets about the Arcanum Chest. Can you assist me?
         Saoirse: Indeed I know the number. But not everyone is the right person to share the secret.
             ** [Use magic SECRETLY] Oh is that true?
+            ~ magic_Saoirse = true
             {~->Success|->Fail}
             ** [Ask sincerely] How to prove that I am the right person?-> ConverseWithSaoirse
 
@@ -53,6 +54,7 @@ Saoirse: Great power comes with great responsibility.
 === CorrectAnswer ===
     *[Leave] Cedric: Thank you for your guidance!->END
     *[Gratitude and leave] Cedric: Your wisdom is unparalleled. I'm grateful.
+    ~ greet_Saoirse = true
     Saoirse: Farewell, Cedric. Remember, three holds the second position.->END
         
 === WrongAnswer ===
