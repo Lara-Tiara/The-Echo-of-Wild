@@ -19,7 +19,6 @@ public class RoomTransfer : MonoBehaviour
         }
     }
 
-
     void LoadRoom()
     {
         SceneManager.LoadScene(roomToLoad);

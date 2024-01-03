@@ -3446,6 +3446,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueCanvas: {fileID: 471399121}
+  loadGlobalsJSON: {fileID: 4900000, guid: c177459eaf2e79440ae4dfe2ddc1b88d, type: 3}
   canvasController: {fileID: 471399122}
 --- !u!4 &1595240195
 Transform:

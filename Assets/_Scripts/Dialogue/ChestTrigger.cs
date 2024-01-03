@@ -2,16 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using Ink.Runtime;
 
 public class ChestTrigger : MonoBehaviour
 {
     [SerializeField] private GameObject queSign;
     [SerializeField] private GameObject chestCanvas;
     [SerializeField] private ChestController chestController;
-    
 
     private bool playerInRange;
     public static bool isSignCanvasActive;
+    private PlayerCanvasController playerCanvasController;
     private UserInput input;
 
     private void Awake() {
@@ -57,12 +58,11 @@ public class ChestTrigger : MonoBehaviour
             chestCanvas.SetActive(isSignCanvasActive);
 
             GameDataManager.hasChest = true;
+            Debug.Log("Chest has been seen");
 
             if (isSignCanvasActive) {
                 chestController.OnChestInteraction(); 
             }
-
-            Debug.Log(isSignCanvasActive ? "Talk is pressed" : "Exit sign is pressed");
         }
     }
 
@@ -77,5 +77,6 @@ public class ChestTrigger : MonoBehaviour
             playerInRange = false;
         }
     }
+    
 }
 
