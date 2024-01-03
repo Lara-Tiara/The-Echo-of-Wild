@@ -20,7 +20,7 @@ Oisin: I would have remained undiscovered forever.
     Oisin: Could you help me escape from this trap, please?
     ** [No] Cedric: I'm not sure it's safe to release a lion, even one as grand as yourself...
         -> Refuse_Ending
-    ** [Yes (Risky)] Cedric: Of course, I'll help. You won't harm me, will you?
+    ** [Yes] Cedric: Of course, I'll help. You won't harm me, will you?
         Oisin: Never. I would never harm someone who is trying to save me. But I won't forget those who have tricked me.
         *** [How can I help you] Cedric: Let me see... This trap is tightly secured.
             Oisin: If you could use some magic to free me...

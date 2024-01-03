@@ -1,4 +1,6 @@
 INCLUDE globals.ink
+
+
 Tadhg: Magic lies not just in the casting of spells, 
 Tadhg: but in the wisdom of the ages, 
 Tadhg: whispered through the leaves of time.
@@ -47,7 +49,9 @@ Cedric: Thank you for your time, but I must go. -> END
 Tadhg: Alas, that is not the right answer. Wisdom comes with time. -> END
 
 === Success ===
-Tadhg: Yes, you are lucky, the number is eight.->CorrectAnswer
+Tadhg: Yes, you are lucky, the number is eight.
+->CorrectAnswer
 
 === Fail ===
-Tadhg: Sorry, I guess today is not your day. But you can solve the riddle yourself.->RiddleChallenge     
+Tadhg: Sorry, I guess today is not your day. But you can solve the riddle yourself.
+->RiddleChallenge     

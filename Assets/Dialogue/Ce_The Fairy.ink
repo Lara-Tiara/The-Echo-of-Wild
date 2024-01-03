@@ -1,5 +1,6 @@
 INCLUDE globals.ink
 
+
 Niamh: Oh, another lost person... 
 
 * [Who are you?] Cedric: Hi, I'm Cedric, a shepherd. What about you?
