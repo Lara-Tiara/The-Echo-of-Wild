@@ -5,6 +5,7 @@ using UnityEngine.InputSystem;
 
 public class SignTrigger : MonoBehaviour
 {
+    public string targetTag = "Player";
     [SerializeField] private GameObject queSign;
     [SerializeField] private GameObject signCanvas;
     //[SerializeField] private ChestController chestController;
@@ -64,13 +65,13 @@ public class SignTrigger : MonoBehaviour
     }
 
     public virtual void OnTriggerEnter2D(Collider2D other) {
-        if (other.CompareTag("Player")) {
+        if (other.CompareTag(targetTag)) {
             playerInRange = true;
         }
     }
 
     public virtual void OnTriggerExit2D(Collider2D other) {
-        if (other.CompareTag("Player")) {
+        if (other.CompareTag(targetTag)) {
             playerInRange = false;
         }
     }

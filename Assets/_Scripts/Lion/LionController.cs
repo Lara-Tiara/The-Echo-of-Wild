@@ -48,7 +48,7 @@ public class LionController : MonoBehaviour
         }
 
         float currentSpeed = isRunning ? runSpeed : moveSpeed;
-        rb.velocity = new Vector2(moveDirection.x * moveSpeed, moveDirection.y * moveSpeed);
+        rb.velocity = new Vector2(moveDirection.x * currentSpeed, moveDirection.y * currentSpeed);
     }
 
     public void ToggleRun() {
