@@ -54,6 +54,7 @@ Saoirse: Great power comes with great responsibility.
 === CorrectAnswer ===
     *[Leave] Cedric: Thank you for your guidance!->END
     *[Gratitude and leave] Cedric: Your wisdom is unparalleled. I'm grateful.
+    ~ greet_Saoirse = true
     Saoirse: Farewell, Cedric. Remember, three holds the second position.->END
         
 === WrongAnswer ===
