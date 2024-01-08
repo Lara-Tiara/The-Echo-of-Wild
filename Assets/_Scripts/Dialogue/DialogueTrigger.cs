@@ -66,13 +66,14 @@ public class DialogueTrigger : MonoBehaviour
     public virtual void OnTriggerEnter2D(Collider2D other) {
         if (other.gameObject.tag == targetTag) {
             playerInRange = true;
+            PlayerControl.AttackedTarget = transform.parent.gameObject;
         }
     }
 
     public virtual void OnTriggerExit2D(Collider2D other) {
         if (other.gameObject.tag == targetTag) {
             playerInRange = false;
+            PlayerControl.AttackedTarget = null;
         }
     }
-
 }

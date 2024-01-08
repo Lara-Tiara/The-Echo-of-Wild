@@ -11,6 +11,7 @@ public class PlayerControl : MonoBehaviour
     private InputAction move;
     [SerializeField] public float moveSpeed = 15f;
     [SerializeField] private Animator animator;
+    public static GameObject AttackedTarget;
 
     private void Awake() {
 		rb = this.GetComponent<Rigidbody2D>();
@@ -23,6 +24,7 @@ public class PlayerControl : MonoBehaviour
         animator = GetComponent<Animator>();
 	}
     void Update() {
+        Acttack();
         if (DialogueManager.dialogueIsPlaying || SignTrigger.isSignCanvasActive) {
             animator.SetFloat("Horizontal", 0);
             animator.SetFloat("Vertical", 0);
@@ -60,5 +62,31 @@ public class PlayerControl : MonoBehaviour
     private void OnDisable() {
         move = controls.Gameplay._2DMovement;
         controls.Gameplay.Disable();
+    }
+
+    public static bool IsWitchDeadth =false;
+    public static bool IsMouseDeadth =false;
+    public static bool IsFairyDeadth =false;
+    void Acttack(){
+        if(Input.GetKeyDown(KeyCode.J)){
+            var v = AttackedTarget.GetComponent<NpcAttacted>();
+            v.BeActtacked();
+            if(v.BeActtackedCoount==2){
+                switch(v.gameObject.name){
+                    case "Fairy":
+                        IsFairyDeadth =true;
+                        Debug.Log("IsFairyDeadth"+IsFairyDeadth);
+                        break;
+                    case "Mage Mouse":
+                        IsMouseDeadth =true;
+                        Debug.Log("IsMouseDeadth"+IsMouseDeadth);
+                        break;
+                    case "W_witch":
+                        IsWitchDeadth =true;
+                        Debug.Log("IsWitchDeadth"+IsWitchDeadth);
+                        break;
+                }
+            }
+        }
     }
 }

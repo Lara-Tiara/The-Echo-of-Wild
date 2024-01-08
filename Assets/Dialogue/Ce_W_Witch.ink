@@ -6,7 +6,7 @@ Saoirse: Great power comes with great responsibility.
 * [Approach Saoirse] Cedric: Greetings, are you Saoirse, the witch of the woods?
     Saoirse: Indeed, I am the keeper of forgotten lore and ancient magic.
     -> SaoirseDialogue
-
+    
 == SaoirseDialogue ==
     * [Ask for help] Cedric: I seek secrets about the Arcanum Chest. Can you assist me?
         Saoirse: Indeed I know the number. But not everyone is the right person to share the secret.
