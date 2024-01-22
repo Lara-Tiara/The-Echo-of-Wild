@@ -748,6 +748,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7307282299391337154, guid: 31c5ca9efadc78f4894b9604142aea2d, type: 3}
+      propertyPath: codeSign
+      value: 
+      objectReference: {fileID: 1616256265}
     - target: {fileID: 7893140682507352765, guid: 31c5ca9efadc78f4894b9604142aea2d, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -3680,6 +3684,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2861482871128008849, guid: 291f2891e468dd640895b03c49c509dd, type: 3}
+      propertyPath: codeSign
+      value: 
+      objectReference: {fileID: 1616256265}
     - target: {fileID: 3852567664926240378, guid: 291f2891e468dd640895b03c49c509dd, type: 3}
       propertyPath: m_LocalScale.x
       value: 4
@@ -4169,6 +4177,37 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1 &1616256265
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1616256266}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1616256266
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1616256265}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -4.8323364, y: -0.23635885, z: -3.390105}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1793698866
 GameObject:
   m_ObjectHideFlags: 0
@@ -5670,6 +5709,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8805398144333223549, guid: 32e6ef34abae72e47b78955afe1a1f42, type: 3}
+      propertyPath: codeSign
+      value: 
+      objectReference: {fileID: 1616256265}
     - target: {fileID: 9133394211411082568, guid: 32e6ef34abae72e47b78955afe1a1f42, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -5926,3 +5969,4 @@ SceneRoots:
   - {fileID: 384414335}
   - {fileID: 1275688645}
   - {fileID: 1445394488}
+  - {fileID: 1616256266}

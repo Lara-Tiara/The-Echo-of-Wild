@@ -64,25 +64,25 @@ public class PlayerControl : MonoBehaviour
         controls.Gameplay.Disable();
     }
 
-    public static bool IsWitchDeadth =false;
-    public static bool IsMouseDeadth =false;
-    public static bool IsFairyDeadth =false;
+    public static bool IsWitchDeadth = false;
+    public static bool IsMouseDeadth = false;
+    public static bool IsFairyDeadth = false;
     void Acttack(){
-        if(Input.GetKeyDown(KeyCode.J)){
+        if(Input.GetKeyDown(KeyCode.V)){
             var v = AttackedTarget.GetComponent<NpcAttacted>();
             v.BeActtacked();
-            if(v.BeActtackedCoount==2){
+            if(v.BeActtackedCount==2){
                 switch(v.gameObject.name){
                     case "Fairy":
-                        IsFairyDeadth =true;
+                        IsFairyDeadth = true;
                         Debug.Log("IsFairyDeadth"+IsFairyDeadth);
                         break;
                     case "Mage Mouse":
-                        IsMouseDeadth =true;
+                        IsMouseDeadth = true;
                         Debug.Log("IsMouseDeadth"+IsMouseDeadth);
                         break;
                     case "W_witch":
-                        IsWitchDeadth =true;
+                        IsWitchDeadth = true;
                         Debug.Log("IsWitchDeadth"+IsWitchDeadth);
                         break;
                 }

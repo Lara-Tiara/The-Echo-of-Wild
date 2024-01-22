@@ -59,7 +59,6 @@ Niamh: Oh, another lost person...
     Niamh: The answer is a number from zero to nine.
         ***[Seven]Cedric: It's seven!
         Niamh: Yes, you are right! Go solve the other numbers and find out the secret.
-        ~ solve_Niamh = true
         ->Right_Answer
         ***[Eight]Cedric: It must be eight.
         ->Wrong_Answer
@@ -69,7 +68,6 @@ Niamh: Oh, another lost person...
 === Right_Answer ===
 *[Leave] Cedric: Thank you very much!->END
 *[Gratitude and leave] Cedric: Thank you and I hope you can find the other guardians soon, wish you the best!
-    ~ greet_Niamh = true
     Niamh: Thank you! And don't forget seven is the third digits.->END
 
 === Wrong_Answer ===

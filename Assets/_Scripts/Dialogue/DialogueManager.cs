@@ -48,9 +48,19 @@ public class DialogueManager : MonoBehaviour
         if(GameDataManager.hasChest == true){
             currentStory.variablesState["check_chest"] = true;
         }
+         if(PlayerControl.IsFairyDeadth) {
+            currentStory.variablesState["fairy_dead"] = "true";
+        }
+        if(PlayerControl.IsMouseDeadth) {
+            currentStory.variablesState["mouse_dead"] = "true";
+        }
+        if(PlayerControl.IsWitchDeadth) {
+            currentStory.variablesState["witch_dead"] = "true";
+        }
     }
 
-    public void EnterDialogueMode(TextAsset inkJSON){
+    public void EnterDialogueMode(TextAsset inkJSON) {
+       
         canvasController.CloseDialogs();
         currentStory = new Story(inkJSON.text);
 

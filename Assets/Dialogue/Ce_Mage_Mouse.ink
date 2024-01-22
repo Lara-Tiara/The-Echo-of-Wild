@@ -29,7 +29,6 @@ Tadhg: whispered through the leaves of time.
     
     Cedric: The answer is a number from zero to nine.
         ***[Eight] Cedric: It's eight!
-        ~ solve_Tadhg = true
             Tadhg: Correct! The number eight is key to many mysteries. -> CorrectAnswer
         ***[Six] Cedric: Could it be six?
             -> WrongAnswer
@@ -42,7 +41,6 @@ Cedric: Thank you for your time, but I must go. -> END
 === CorrectAnswer ===
 *[Leave] Cedric: Thank you very much!->END
 *[Gratitude and leave] Cedric: Thank you and I hope you can find the other guardians soon, wish you the best!
-    ~ greet_Tadhg = true
     Tadhg: Thank you! And don't forget eight is the first digits.->END
 
 === WrongAnswer ===

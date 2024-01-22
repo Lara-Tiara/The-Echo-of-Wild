@@ -5,11 +5,12 @@ using UnityEngine;
 public class NpcAttacted : MonoBehaviour
 {
     [SerializeField] Transform Hp;
+    [SerializeField] GameObject codeSign;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        codeSign.SetActive(false);
     }
 
     // Update is called once per frame
@@ -17,10 +18,10 @@ public class NpcAttacted : MonoBehaviour
     {
         
     }
-    public int BeActtackedCoount = 0;
+    public int BeActtackedCount = 0;
     public void BeActtacked(){
-        BeActtackedCoount++;
-        switch(BeActtackedCoount)
+        BeActtackedCount++;
+        switch(BeActtackedCount)
         {
             case 1:
                 Hp.localPosition = new Vector3(-0.035f,Hp.localPosition.y,0);
@@ -29,6 +30,7 @@ public class NpcAttacted : MonoBehaviour
             case 2:
                 Hp.localScale = Vector3.zero;
                 gameObject.SetActive(false);
+                codeSign.SetActive(true);
                 break;
         }
     }
