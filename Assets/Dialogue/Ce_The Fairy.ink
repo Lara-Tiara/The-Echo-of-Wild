@@ -36,8 +36,8 @@ Niamh: Oh, another lost person...
                 Niamh: One such secret is the Echo of Eldoria
                 Niamh: A power that could restore balance.-> Divert2
             *** [Echo of Eldoria?] Cedric: What is this Echo of Eldoria?
-                Niamh: It's an ancient force, tied to the first guardians. 
-                Niamh: It can only be summoned by one who proves their worth and knows the kingdom's heart. 
+                Niamh: It's an ancient force.
+                Niamh: It can only be obtained by one who proves their worth and knows the kingdom's heart. 
                 Niamh: Perhaps it could even break the chains that bind Oisin.-> Divert2
             ***[Leave] Cedric: Thank you for the information. I need to go.-> DONE
                 

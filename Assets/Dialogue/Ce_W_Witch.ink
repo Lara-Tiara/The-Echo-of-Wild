@@ -4,18 +4,18 @@ Saoirse: Great power comes with great responsibility.
 -> SaoirseEncounter
 === SaoirseEncounter ===
 * [Approach Saoirse] Cedric: Greetings, are you Saoirse, the witch of the woods?
-    Saoirse: Indeed, I am the keeper of forgotten lore and ancient magic.
+    Saoirse: Indeed, I am the keeper of ancient magic.
     -> SaoirseDialogue
     
 == SaoirseDialogue ==
-    * [Ask for help] Cedric: I seek secrets about the Arcanum Chest. Can you assist me?
+    * [Ask for help] Cedric: I seek a way to unlock the Arcanum Chest. Can you help me?
         Saoirse: Indeed I know the number. But not everyone is the right person to share the secret.
             ** [Use magic SECRETLY] Oh is that true?
             {~->Success|->Fail}
             ** [Ask sincerely] How to prove that I am the right person?-> ConverseWithSaoirse
 
 == ConverseWithSaoirse ==
-    Saoirse: To discern the wise from the fool, a test of your insight I shall propose. Let us converse.
+    Saoirse: To tell the wise from the fool, a test of your wisdom I shall propose. Let us converse.
     Saoirse: Tell me, Shepherd, what is the shape that holds the world together?
     *   "The circle." 
         Saoirse: Indeed, but incomplete. The circle has no beginning and no end, yet something else underlies the foundation of all. 
@@ -24,31 +24,33 @@ Saoirse: Great power comes with great responsibility.
         Saoirse: Precisely. A shape of stability, where points meet and bonds are born. 
         -> CorrectPath
     *   "The square."
-        Saoirse: The strongest shape, yet not the one that underpins the essence of all. 
+        Saoirse: The strongest shape, yet not the one that reveal the essence of all. 
         -> ContinueConversation
 
 == ContinueConversation ==
-    Saoirse: Consider the elements of the world. How many do you deem fundamental?
+    Saoirse: Consider the elements of the world. How many do you consider fundamental?
     *   "Four elements."
-        Saoirse: Indeed, yet there is a trinity that is often overlooked in the balance of nature.
+        Saoirse: Indeed, yet there is a trinity that is often shown in the balance of nature.
         -> CorrectPath
     *   "Five elements."
         Saoirse: Five brings complexity, but simplicity often holds the key to understanding.
         -> CorrectPath
     *   "Three elements."
-        Saoirse: Ah, now you see the core of all - a trio that stands at the heart of existence.
+        Saoirse: Ah, now you see the core of all.
         -> CorrectPath
 
 == CorrectPath ==
-    Saoirse: Your answers reveal an understanding. Now, think of numbers, of tales and legends. Which number stands as the foundation?
+    Saoirse: Your answers reveal an understanding. 
+        Now, think of numbers, of our previous conversation. 
+        Which number stands as the foundation?
     *   "Three."
-        Saoirse: Wise indeed! You understand the essence. The number three is key to the Arcanum Chest.
+        Saoirse: Wise indeed! The number three is key to the Arcanum Chest.
         -> CorrectAnswer
     *   "One."
         Saoirse: One is the beginning, but not the foundation of all. Reflect again on the essence of things. 
         -> WrongAnswer
     *   "Nine."
-        Saoirse: Nine signifies completion, yet it does not underpin the core. Look to simpler origins. 
+        Saoirse: Nine signifies completion, yet it does not reveal the core. Look to simpler origins. 
         -> WrongAnswer
 
 === CorrectAnswer ===
@@ -66,7 +68,7 @@ Saoirse: What did you do? You sly young man!->END
 === Fail ====
 Saoirse: Perhaps your power is not as strong as you think.
 *[Leave] I would be powerful one day.->END
-*[Try your Wisdom] I think I can still get the number without using of magic.
+*[Try your Wisdom] I think I can still get the number with my wisdom.
 -> ConverseWithSaoirse
 
 

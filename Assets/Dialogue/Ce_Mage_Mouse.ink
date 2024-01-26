@@ -7,12 +7,12 @@ Tadhg: whispered through the leaves of time.
 ->MageEncounter
 === MageEncounter ===
 * [Approach Tadhg] Cedric: Hello there, are you the Guardian I've heard about?
-    Tadhg: Yes, I am he, the guardian of arcane secrets in these woods.
+    Tadhg: Yes, I am the guardian of arcane secret.
     -> MageDialogue
 
 == MageDialogue ==
     * [Ask for help] Cedric: I'm looking for a way to unlock the Arcanum Chest. Can you help me?
-        Tadhg: I can sniff the power in you... But I'm gonna test your luck now!
+        Tadhg: I can sniff the wisdom in you... But I'm gonna test your luck now!
         **[Luck] Cedric: I feel lucky today.
         {~->Success|->Fail}.
     * [Leave] ->Leave
@@ -44,7 +44,7 @@ Cedric: Thank you for your time, but I must go. -> END
     Tadhg: Thank you! And don't forget eight is the first digits.->END
 
 === WrongAnswer ===
-Tadhg: Alas, that is not the right answer. Wisdom comes with time. -> END
+Tadhg: That is not the right answer. Wisdom comes with time. -> END
 
 === Success ===
 Tadhg: Yes, you are lucky, the number is eight.
